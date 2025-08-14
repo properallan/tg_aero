@@ -1,89 +1,89 @@
 %===========================================================
-% 			Lista de Símbolos
+% 			List of Symbols
 %===========================================================
 
 \chapter*{List of Symbols}
 
 % --- Roman Symbols ---
 \begin{itemize}
-\item[$a_j$] Vetor de coeficientes do POD para o snapshot $j$
-\item[$\mathbf{a}_h, \mathbf{a}_l$] Vetores de coeficientes do POD de alta e baixa fidelidade
-\item[$b_j$] Termo de bias do neurônio $j$ na rede neural
-\item[$c_{p,s}$] Capacidade de calor específica do sólido
-\item[$d_h, d_l$] Dimensão do espaço latente de alta e baixa fidelidade
-\item[$e$] Energia interna específica
-\item[$E$] Energia total por unidade de massa
-\item[$E_{tot}$] Energia total por unidade de volume
-\item[$f$] Função de ativação da rede neural
-\item[$f_{\text{surrogate}}$] Função do modelo substituto genérico
-\item[$\mathbf{F}$] Vetor de fluxo das equações de Euler
-\item[$\mathbf{F}^c, \mathbf{F}^v$] Vetores de fluxo convectivo e viscoso das equações de Navier-Stokes
-\item[$\mathbf{I}$] Tensor identidade
-\item[$k$] Condutividade térmica
-\item[$\mathbf{K}$] Matriz de covariância do Kriging
-\item[$\mathbf{k}_*$] Vetor de covariância do Kriging para um novo ponto
-\item[$\mathcal{L}$] Função de custo (loss) da rede neural
-\item[$m_h, m_l$] Dimensão (número de graus de liberdade) de um snapshot
-\item[$M$] Número de Mach
-\item[$n$] Número total de snapshots no dataset
-\item[$N_{cells}$] Número total de células na malha
-\item[$N_{nodes}$] Número de nós na malha 2D
-\item[$N_{wall}$] Número de pontos na parede
-\item[$N_{1D}$] Número de pontos na malha 1D
-\item[$o_j$] Saída (output) do neurônio $j$
-\item[$p$] Pressão estática
-\item[$p_{GCI}$] Ordem de convergência observada no estudo de malha
-\item[$q$] Fluxo de calor escalar ou médio
-\item[$\mathbf{q}$] Vetor de fluxo de calor no fluido
-\item[$\mathbf{q}_s$] Vetor de fluxo de calor difusivo no sólido
-\item[$\mathbf{Q}$] Vetor de termos-fonte das equações de Euler
-\item[$r$] Número de modos POD retidos na base truncada
-\item[$R$] Constante específica do gás
-\item[$\mathcal{R}$] Resíduo das equações de Navier-Stokes
-\item[$S$] Área da seção transversal do bocal
-\item[$t$] Tempo
-\item[$T$] Temperatura
-\item[$u$] Velocidade axial no escoamento 1D
-\item[$\mathbf{u}_i$] Vetor do $i$-ésimo modo espacial do POD
-\item[$\mathbf{U}$] Matriz de vetores singulares à esquerda (modos POD) do SVD
-\item[$U_s$] Variável conservada na equação de condução de calor
-\item[$\mathbf{v}$] Vetor de velocidade
-\item[$\mathbf{V}$] Matriz de vetores singulares à direita do SVD
-\item[$w_{ij}$] Peso da conexão entre os neurônios $i$ e $j$
-\item[$\mathbf{W}$] Vetor de variáveis conservadas (Euler e RANS)
-\item[$\mathbf{x}_h, \mathbf{x}_l$] Vetores de snapshot de alta e baixa fidelidade
-\item[$\mathbf{X}_h, \mathbf{X}_l$] Matrizes de snapshot de alta e baixa fidelidade
-\item[$\mathbf{y}$] Vetor de valores observados no treinamento do Kriging
-\item[$Y^{+}$] Distância adimensional à parede
+\item[$a_j$] POD coefficient vector for snapshot $j$
+\item[$\mathbf{a}_h, \mathbf{a}_l$] High- and low-fidelity POD coefficient vectors
+\item[$b_j$] Bias term of neuron $j$ in the neural network
+\item[$c_{p,s}$] Specific heat capacity of the solid
+\item[$d_h, d_l$] Dimension of the high- and low-fidelity latent space
+\item[$e$] Specific internal energy
+\item[$E$] Total energy per unit mass
+\item[$E_{tot}$] Total energy per unit volume
+\item[$f$] Neural network activation function
+\item[$f_{\text{surrogate}}$] Generic surrogate model function
+\item[$\mathbf{F}$] Flux vector of the Euler equations
+\item[$\mathbf{F}^c, \mathbf{F}^v$] Convective and viscous flux vectors of the Navier-Stokes equations
+\item[$\mathbf{I}$] Identity tensor
+\item[$k$] Thermal conductivity
+\item[$\mathbf{K}$] Kriging covariance matrix
+\item[$\mathbf{k}_*$] Kriging covariance vector for a new point
+\item[$\mathcal{L}$] Neural network loss function
+\item[$m_h, m_l$] Dimension (number of degrees of freedom) of a snapshot
+\item[$M$] Mach number
+\item[$n$] Total number of snapshots in the dataset
+\item[$N_{cells}$] Total number of cells in the mesh
+\item[$N_{nodes}$] Number of nodes in the 2D mesh
+\item[$N_{wall}$] Number of points on the wall
+\item[$N_{1D}$] Number of points in the 1D mesh
+\item[$o_j$] Output of neuron $j$
+\item[$p$] Static pressure
+\item[$p_{GCI}$] Observed order of convergence in the grid study
+\item[$q$] Scalar or average heat flux
+\item[$\mathbf{q}$] Heat flux vector in the fluid
+\item[$\mathbf{q}_s$] Diffusive heat flux vector in the solid
+\item[$\mathbf{Q}$] Source term vector of the Euler equations
+\item[$r$] Number of POD modes retained in the truncated basis
+\item[$R$] Specific gas constant
+\item[$\mathcal{R}$] Residual of the Navier-Stokes equations
+\item[$S$] Cross-sectional area of the nozzle
+\item[$t$] Time
+\item[$T$] Temperature
+\item[$u$] Axial velocity in 1D flow
+\item[$\mathbf{u}_i$] Vector of the $i$-th spatial POD mode
+\item[$\mathbf{U}$] Matrix of left singular vectors (POD modes) from SVD
+\item[$U_s$] Conserved variable in the heat conduction equation
+\item[$\mathbf{v}$] Velocity vector
+\item[$\mathbf{V}$] Matrix of right singular vectors from SVD
+\item[$w_{ij}$] Weight of the connection between neurons $i$ and $j$
+\item[$\mathbf{W}$] Vector of conserved variables (Euler and RANS)
+\item[$\mathbf{x}_h, \mathbf{x}_l$] High- and low-fidelity snapshot vectors
+\item[$\mathbf{X}_h, \mathbf{X}_l$] High- and low-fidelity snapshot matrices
+\item[$\mathbf{y}$] Vector of observed values in Kriging training
+\item[$Y^{+}$] Dimensionless wall distance
 \end{itemize}
 
 % --- Greek Symbols ---
 \begin{itemize}
-\item[$\gamma$] Razão entre os calores específicos
-\item[$\mu$] Viscosidade dinâmica molecular
-\item[$\mu_t$] Viscosidade turbulenta (de "eddy")
-\item[$\mu_{\text{eff}}$] Viscosidade efetiva
-\item[$\hat{\mu}$] Média estimada do processo Gaussiano (Kriging)
-\item[$\rho$] Densidade
-\item[$\rho_s$] Densidade do sólido
-\item[$\sigma_i$] Valor singular $i$ da matriz de snapshots
-\item[$\mathbf{\Sigma}$] Matriz diagonal de valores singulares
-\item[$\boldsymbol{\tau}$] Tensor de tensões viscosas
-\item[$\mathbf{\Psi}_r$] Base de modos POD truncada com $r$ modos
+\item[$\gamma$] Ratio of specific heats
+\item[$\mu$] Molecular dynamic viscosity
+\item[$\mu_t$] Turbulent (eddy) viscosity
+\item[$\mu_{\text{eff}}$] Effective viscosity
+\item[$\hat{\mu}$] Estimated mean of the Gaussian process (Kriging)
+\item[$\rho$] Density
+\item[$\rho_s$] Solid density
+\item[$\sigma_i$] $i$-th singular value of the snapshot matrix
+\item[$\mathbf{\Sigma}$] Diagonal matrix of singular values
+\item[$\boldsymbol{\tau}$] Viscous stress tensor
+\item[$\mathbf{\Psi}_r$] Truncated POD mode basis with $r$ modes
 \end{itemize}
 
 % --- Subscripts and Superscripts ---
 \begin{itemize}
-\item[$(\cdot)_0$] Condição de estagnação
-\item[$(\cdot)_h$] Relativo à alta fidelidade (High-Fidelity)
-\item[$(\cdot)_l$] Relativo à baixa fidelidade (Low-Fidelity)
-\item[$(\cdot)_s$] Relativo ao domínio sólido (Solid)
-\item[$(\cdot)_{in}$] Condição de entrada (Inlet)
-\item[$(\cdot)_{exit}$] Condição de saída (Exit)
-\item[$(\cdot)_{j}$] Índice do $j$-ésimo snapshot ou neurônio
-\item[$(\cdot)_{i,j}$] Componente $i,j$ de uma matriz ou tensor
-\item[$(\cdot)^T$] Operador de transposição
-\item[$(\cdot)^c$] Relativo ao fluxo convectivo
-\item[$(\cdot)^v$] Relativo ao fluxo viscoso
-\item[$\hat{(\cdot)}$] Valor previsto ou estimado
+\item[$(\cdot)_0$] Stagnation condition
+\item[$(\cdot)_h$] Related to high fidelity
+\item[$(\cdot)_l$] Related to low fidelity
+\item[$(\cdot)_s$] Related to the solid domain
+\item[$(\cdot)_{in}$] Inlet condition
+\item[$(\cdot)_{exit}$] Exit condition
+\item[$(\cdot)_{j}$] Index of the $j$-th snapshot or neuron
+\item[$(\cdot)_{i,j}$] $i,j$ component of a matrix or tensor
+\item[$(\cdot)^T$] Transpose operator
+\item[$(\cdot)^c$] Related to convective flux
+\item[$(\cdot)^v$] Related to viscous flux
+\item[$\hat{(\cdot)}$] Predicted or estimated value
 \end{itemize}
