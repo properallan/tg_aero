@@ -1,0 +1,12 @@
+\makeatletter \iftoggle {toggleVersaoFinal}{\EveryShipout {\if@mainmatter \else \ifodd \c@page \hbox {}\pagebreak \fi \fi } } {} 
+\babel@toc {brazil}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Exemplo de deformação ocorrida durante o processo de fabricação em comparação com produto aprovado}}{28}{figure.caption.11}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

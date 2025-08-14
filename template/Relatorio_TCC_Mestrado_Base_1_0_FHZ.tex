@@ -1,0 +1,395 @@
+%% =============================
+% * <romulolins2001@gmail.com> 2018-08-09T22:36:34.296Z:
+%
+% ^.
+%%      IMPORTANTE
+%% ESTE ARQUIVO DEVE ESTAR SALVO COMO
+%%      UTF - 8
+%% =============================
+
+% ----------------------------------------------------------
+% Este arquivo é o arquivo mestre
+% Relatorio_TCC_Mestrado_Base_VERSÃO_SUBVERSÃO_FHZ
+% Ele contém as classes, formatações e pacotes usadas
+% Contém as informações bases para capas e elementos não textuais
+% Contém a chamada dos arquivos externos
+% ----------------------------------------------------------
+
+%% =====================================
+%% The original source files were:
+%%
+%% coppe.dtx  (with options: `example')
+%%
+%% This is a sample monograph which illustrates the use of `ufabc' document
+%% class and `coppe-unsrt' BibTeX style.
+%% =====================================
+
+%% ===================================== ufabcFHZ
+%% Esta versão para uso da UFABC gera a classe `ufabcFHZ#.dtx'
+%% 		onde # se refere a letra usada para controle das versões
+%% As classes `ufabcFHZ#.cls' possuem comentários explicitando os blocos de comandos usados e o histórico das versões.
+%%
+%% O gerador de referências `abntFHZ#.bst' 
+%% 		onde # se refere ao número usado para controle das versões
+%%
+%% Esta é a versão `ufabcFHZ_LaTeX_Posgrad_v05' - 09.11.2016
+%% 		Organizando os arquivos em LaTeX para o trabalho, comandos personalizados e pacotes inseridos
+%%
+%% ufabcFHZh:
+%% Author(s): FHZ - B. Eng. Fernando Henrique G. Zucatelli
+%% 			  Prof. Dr. Magno Enrique Mendoza Meza
+%% Collaboration(s):
+%% 			  B.Eng. Reginaldo Cardoso
+%% Translator(s):
+%% 			  FHZ & Reginaldo
+%% =====================================
+
+
+% -----------------------------------------
+% Classe do documento ufabcFHZh.cls
+% -----------------------------------------
+% ----------------------------------------- Versão econômica em português
+%\documentclass[dsc]{ufabcFHZh}
+% ----------------------------------------- Versão final em português
+\documentclass[msc, PT, VF]{ufabcFHZh}
+% ----------------------------------------- Versão econômica em inglês
+%\documentclass[msc, EN]{ufabcFHZh}
+% ----------------------------------------- Versão final em inglês
+%\documentclass[msc, EN, VF]{ufabcFHZh}
+% -----------------------------------------
+% ---- Opções da classe:
+%%% msc 	- Mestrado  - Dissertação
+%%% dscexam	- Doutorado - Exame de Qualificação
+%%% dsc 	- Doutorado - Tese
+%%% -- // -- // -- Seleção de idiomas, PT é padrão em caso de vazio/omissão
+%%% É necessário compilar duas vezes seguidas para atualizar o arquivo após alterar o idioma
+%%% (Vazio) - Português
+%%% EN - English
+%%% -- // -- // -- Versão Final ou Econômica
+%%% omissão - versão econômica
+%%% VF 		- Versão Final
+%%% A impressão da versão final deve conter os elementos pré-textuais apenas nas folhas ímpares (lado direito), exceto a ficha catalográfica que fica no verso da folha de rosto, todavia as páginas em branco devem ser contadas, e os elementos textuais e pós-textuais em ambos os lados\footnote{Guia de nornamlização pós-graduações UFABC \url{http://propg.ufabc.edu.br/wp-content/uploads/guia-normalizacao.pdf}}.
+%%% 	De tal forma que a solução mais simples é sempre imprimir frente e verso
+% ----
+
+% -----------------------------------------
+% Codificação - Comandos personalizados - Seleção de cores nos links - Pacotes
+% -----------------------------------------
+% ========= Codificação
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+% =========
+\usepackage{pgfplots}
+% ========== Novos comandos para escrever nomes pré-formatados
+\input{NewCommands/Input_NewCommand}
+\input{NewCommands/Input_NewCommand_Figures}
+%\input{NewCommands/Input_NewCommand_Figures_for_IEEE}
+% ==========
+
+% ==========  Seleção de uso de links coloridos para visualização ou sem cor para impressão final
+%\toggletrue{LinksComCores} 		% Opção links COM CORES => Forma para auxiliar na escrita do relatório
+\togglefalse{LinksComCores} 		% Opção links SEM CORES => Forma correta para imprimir a versão final a ser entregue
+% ==========
+
+% ========== Pacotes
+\input{Pacotes/Input_Pacotes}
+%\input{Pacotes/Input_Pacotes_for_IEEE}
+%\input{Pacotes/Input_Pacotes_Listings}
+% ========== 
+
+% ========== Caminho das Figuras
+%\graphicspath{{Figuras/}}
+%\graphicspath{{Textuais/Images/Fig-Internet.JPG}}
+% ========== 
+
+% ------------------------------------------
+% Cria Lista de Símbolos
+% ------------------------------------------
+\makelosymbols
+
+% ------------------------------------------
+% Cria Lista de Abreviações
+% ------------------------------------------
+\makeloabbreviations
+
+% ------------------------------------------
+% Início do documento
+% ------------------------------------------
+\begin{document}
+	
+% -----------------------------------------
+% INFORMAÇÕES E DADOS - CAPA e FOLHA DE ROSTO
+% -----------------------------------------
+
+\title{Titulo}
+
+
+\foreigntitle{English Title}
+
+
+
+\author{}{Autor}
+
+
+
+% ------- Orientador e (se houver) Coorientador
+\advisor{ Prof. Dr.}{Romulo}{Gonçalves Lins}{}
+\advisor{ Prof. Dr.}{Ricardo}{Gaspar}{}
+
+% ------- Banca
+\examiner{Profa. Dra.}{Marcia Maria Penteado Marchesini}{Examinadora Externa}
+\examiner{Prof. Dr.}{Wilson Carlos da Silva Júnior}{Examinador Externo}
+\examiner{Profa. Dra.}{Franciane Freitas Silveira}{Examinadora Interna Suplente}
+\examiner{Prof. Dr.}{ Rômulo Gonçalves Lins}{Presidente}
+% ------- Coordenador do curso
+\coordinator{Prof.}{Dr.}{NomeCoordenador}{}
+% ------ Data de entrega
+\date{23}{03}{2022} % dia - mês - ano
+% ------ Limite de 5 palavras chaves para ficha catalográfica
+\keyword{K1}
+\keyword{K2}
+\keyword{K3}
+\keyword{K4}
+\keyword{K5}
+
+% ------ Curso/Programa de pós-graduação
+\department{EEN}
+%%% ---- Opções de ``\department''  
+%%% -> Edição em ufabcFHZ#.cls % *************** Cursos - Inicio
+%%%	{PEB} 	- {Engenharia Biomédica}
+%%%	{PEC} 	- {Engenharia Civil}
+%%%	{PEE} 	- {Engenharia Elétrica}
+%%%	{PEM} 	- {Engenharia Mecânica}
+%%%	{PEMM} 	- {Engenharia Metalúrgica e de Materiais}
+%%%	{PEN} 	- {Engenharia Nuclear}
+%%%	{PENO} 	- {Engenharia Oceânica}
+%%%	{PPE} 	- {Planejamento Energético}
+%%%	{PEP} 	- {Engenharia de Produção}
+%%%	{PEQ} 	- {Engenharia Química}
+%%%	{PESC} 	- {Engenharia de Sistemas e Computação}
+%%%	{PET} 	- {Engenharia de Transportes}
+%  ===== Adicionado em 18.11.2015 - fonte: http://propg.ufabc.edu.br/cursos/
+%%%	{BIOS} 	- {Biossistemas}
+%%%	{BIOT} 	- {Biotecnociência}
+%%%	{CCM} 	- {Ciência da Computação}	
+%%%	{CTA}	- {Ciência e Tecnologia Ambiental}	
+%%%	{CTQ} 	- {Ciência e Tecnologia/Química}	
+%%%	{CHS} 	- {Ciências Humanas e Sociais}	
+%%%	{EEN} 	- {Energia}	
+%%%	{MEB} 	- {Engenharia Biomédica}	
+%%%	{MEI} 	- {Engenharia da Informação}	
+%%% {EGI} 	- {Engenharia de Instrumentação, Automação e Robótica}	
+%%%	{EHFCM} - {Ensino, História e Filosofia das Ciências e Matemática}
+
+%%%	{EDI} 	- {Evolução e Diversidade }	
+%%%	{FIL} 	- {Filosofia}	
+%%%	{FIS} 	- {Física}	
+%%%	{MAT} 	- {Matemática}	
+%%%	{NMA} 	- {Nanociências e Materiais Avançados}	
+%%%	{NCG} 	- {Neurociência e Cognição}	
+%%%	{PGT} 	- {Planejamento e Gestão do Território}	
+%%%	{PPU} 	- {Políticas Públicas}	
+%%%	%% Mestrado Profissional
+%%%	{PROFMAT} - {Mestrado Profissional em Matemática em Rede Nacional}	
+%%%	{MNPEF}   - {Mestrado Nacional Profissional em Ensino de Física}
+%%%	%% Doutorado Acadêmico Industrial
+%%%	{DAI} 	  - {Doutorado Acadêmico Industrial}
+
+%  ===== Adicionado em 25.08.2019 - Mestrado de Gestão da Inovação
+%%%	{INV} 	  - {Engenharia e Gestão da Inovação}
+
+% ----
+% ------------------------------------------
+% Criar Capa
+% ------------------------------------------
+\maketitle
+
+% -----------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% -----------------------------
+%%%%%%%%%%%================%%%%%%%%%%%
+\frontmatter
+%%%%%%%%%%%================%%%%%%%%%%%
+
+% ------------------------------------------
+% Dedicatória
+% ------------------------------------------
+\dedication{}
+
+% ------------------------------------------
+% AGRADECIMENTOS - Input externo
+% ------------------------------------------
+\begin{agradecimentos}
+	\input{Pre-Textuais/Input_Agr_1_0}
+\end{agradecimentos}
+% -----------------------------------------
+
+% -----------------------------------------
+% EPÍGRAFE - Input externo
+% -----------------------------------------
+\begin{epigrafe}
+	\input{Pre-Textuais/Input_Epi_1_0}
+\end{epigrafe}
+% -----------------------------------------
+
+% -----------------------------------------
+% RESUMOS - Input externo
+% -----------------------------------------
+% --- resumo em inglês
+\begin{foreignabstract}
+	\input{Pre-Textuais/Input_Abs_1_0}
+\end{foreignabstract}
+\keywordeng
+{Fourth Industrial Revolution};
+{Data-Driven Culture};
+{Computer Vision systems};
+{Quality control};
+{Statistical process control}
+% -----------------------------------------
+
+% --- resumo em português
+\begin{abstract}
+	\input{Pre-Textuais/Input_Abs_2_0}
+\end{abstract}
+\palavrachave{Indústria 4.0};
+{Cultura de Dados};
+{Sistemas de visão computacional};
+{Qualidade};
+{Controle estatístico de processo}
+
+% -----------------------------------------
+% Inserir Lista de Figuras
+% -----------------------------------------
+\listoffigures
+
+
+% -----------------------------------------
+% Inserir lista de Tabelas
+% -----------------------------------------
+\listoftables
+% -----------------------------------------
+% Inserir lista de símbolos e abreviações
+% -----------------------------------------
+\printloabbreviations
+\printlosymbols
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referências e explicações detalhadas:
+% http://sourceforge.net/p/coppetex/mailman/message/19812913/
+% http://tex.stackexchange.com/questions/161304/makeindex-no-nls-file
+% ++++++
+% Comandos a serem inseridos para agilizar produção da lista de símbolos e de abreviaturas
+% ++++++
+% makeindex -s coppe.ist -o <filename>.los <filename>.syx
+% makeindex -s coppe.ist -o <filename>.lab <filename>.abx
+% ++++++
+% Para este arquivo temos:
+% <filename> = Relatorio_TCC_Mestrado_Base_1_0_FHZ
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% ++++++------
+% Método alternativo para inserir lista de símbolos e abreviações
+% Inserir arquivos externos com as listas prontas.
+% São deixados os exemplos abaixo.
+ \include{Pre-Textuais/Include_Sim_1_0}
+ \include{Pre-Textuais/Include_Abv_1_0} 
+% ++++++------
+
+% -----------------------------------------
+% Inserir Sumário
+% -----------------------------------------
+% ************
+\makeatletter \let\ps@plain\ps@empty \makeatother % Remove #pag na 1ª pag do sumário
+% ************
+\tableofcontents
+% -----------------------------------------
+
+% ************ Salvar número da página - Para numeração contínua - Não edite esse bloco
+\setcounter{pagenumber_frontmatter}{\number\value{page}}
+% ************
+
+% -----------------------------
+% ELEMENTOS TEXTUAIS
+% -----------------------------
+
+%%%%%%%%%%%================%%%%%%%%%%%
+\mainmatter
+%%%%%%%%%%%================%%%%%%%%%%%
+
+% ************ Retornar número da página salvo: + 1 no rascunho, + 2 na versão final - Não edite esse bloco
+\iftoggle{toggleVersaoFinal}
+{\setcounter{page}{\number\value{pagenumber_frontmatter} + 2}}
+{\setcounter{page}{\number\value{pagenumber_frontmatter} + 1}}
+% ************
+
+% -----------------------------------------
+% CAPÍTULOS Inseridos de arquivos externos
+%% -----------------------------------------
+\include{Textuais/Include_Int_1_0}
+%% -----------------------------------------
+%% \include{Textuais/Include_Obj_1_0}
+%%\include{Textuais/Include_Obj_1_0}
+%% -----------------------------------------
+\include{Textuais/Include_Rev_1_0} 
+%% -----------------------------------------
+%% \include{Textuais/Include_Jus_1_0} 
+%% -----------------------------------------
+\include{Textuais/Include_Met_1_0}
+%% -----------------------------------------
+\include{Textuais/Include_Mod_1_0}
+%% -----------------------------------------
+%\include{Textuais/Include_Con_1_0}
+\include{Textuais/Include_Con_1_0}
+%% -----------------------------------------
+
+% -----------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% -----------------------------
+
+%%%%%%%%%%%================%%%%%%%%%%%
+\backmatter
+%%%%%%%%%%%================%%%%%%%%%%%
+  
+% -----------------------------
+% Referências bibliográficas
+% -----------------------------
+% \bibliographystyle{coppe-unsrt}
+% \bibliographystyle{plain}
+% \bibliographystyle{abntex2-alf} 
+\bibliographystyle{Bibliografia/abntFHZ5}
+
+% -----------------------------
+% Arquivo bibtex contendo as Referências
+% -----------------------------
+
+\bibliography{Bibliografia/Bibliografia_modelo}
+%@article{chen2009similarity,
+%  title={On the similarity metric and the distance metric},
+%  author={Chen, Shihyen and Ma, Bin and Zhang, Kaizhong},
+%  journal={Theoretical Computer Science},
+%  volume={410},
+%  number={24-25},
+%  pages={2365--2376},
+%  year={2009},
+%  publisher={Elsevier}
+%}
+%CASO QUEIRA INSERIR ANEXOS, RETIRAR O COMENTÁRIO DA LINHA%\appendix
+%E DA LINHA%\input{Apendices/Input_Ap01_1_0}
+% -----------------------------
+% Apêndices
+% -----------------------------
+%\appendix
+% -----------------------------
+\input{Apendices/Input_Ap01_1_0}
+
+% -----------------------------
+% Anexos - OBS: Não há neste modelo distinção numérica entre apêndice e anexo
+% -----------------------------
+\input{Anexos/Input_An01_1_0}
+
+\end{document}
+% ----------------------------------------------------------
+%% End of file `Relatorio_TCC_Mestrado_Base_x_y_autor.tex'.

@@ -1,0 +1,225 @@
+%% =============================
+%%      IMPORTANTE
+%% ESTE ARQUIVO DEVE ESTAR SALVO COMO
+%%      UTF - 8
+%% =============================
+
+% ----------------------------------------------------------
+% Este capítulo é parte integrante do arquivo mestre
+% Relatorio_TCC_Mestrado_Base_VERSÃO_SUBVERSÃO
+% ----------------------------------------------------------
+\usepackage{natbib}
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+% =========
+\usepackage{pgfplots}
+\usepackage{tabularx}
+% -----------------------------------------
+% Pacotes básicos 
+% -----------------------------------------
+\usepackage[section]{placeins}
+\usepackage{lastpage}		% Usado pela Ficha catalográfica
+\usepackage{indentfirst}	% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}			% Controle das cores
+\usepackage{microtype} 		% Melhorias de justificação \usepackage[section]{placeins}
+% \usepackage{amsmath} 		% Referências de equações com parênteses automático usar \eqref
+\usepackage{physics,amsmath}
+
+\usepackage{amssymb} 		% Símbolos matemáticos, incluindo os principais conjuntos numéricos
+\usepackage{cancel}
+% -----------------------------------------
+
+% -----------------------------------------
+% Pacotes gráficos
+% -----------------------------------------
+\usepackage{ae}
+\usepackage{aecompl}
+\usepackage{graphicx, import}	% Inclusão de gráficos
+\usepackage{float} 		% Permite que eu use "H" para a figura ficar entre os parágrafos que eu quero
+%\usepackage{subfigure} % make it possible to include more than one captioned figure/table in a single float
+%\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[font=footnotesize]{caption} % Reduz o tamanho de todos os ``captions''
+%\usepackage{subcaption}
+%\usepackage{subfloat} % make it possible to include more than one captioned 
+\usepackage{epstopdf}
+\usepackage{ulem}
+\usepackage{nomencl}
+\makenomenclature
+% \usepackage{framed}
+\usepackage{lipsum} % geração de texto inútil - dummy
+\usepackage{morefloats}
+
+% -----------------------------------------
+% Pacotes gráficos - Formatação do título
+% -----------------------------------------
+% Se fncychap for adicionado como RequirePackage dentro de ufabcFHZ#.cls não gera o mesmo efeito.
+\usepackage[Bjornstrup]{fncychap} % Formas elegantes de cabeçalho
+%% ------------------------------------
+% Referência: http://tex.stackexchange.com/questions/13357/fncychap-package-reduce-vertical-gap-space-between-header-and-chapter-heading
+%% ------------------------------------
+%% A única alteração feita é em ``\vspace'', por padrão será usado ``-1cm'', fica bom, maximiza o espaço  - Não é necessário editar esse trecho.
+%% ------------------------------------
+\makeatletter
+\renewcommand*{\@makechapterhead}[1]{%
+	%\vspace*{-5\p@}%
+	\vspace*{-1cm}% Recuo vertical para maximizar aproveitamento da página
+	{\parindent \z@ \raggedright \normalfont
+		\ifnum \c@secnumdepth >\m@ne
+		\if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 040920
+		\DOCH
+		\fi
+		\fi
+		\interlinepenalty\@M
+		\if@mainmatter%%%%% Fix for frontmatter, mainmatter, and backmatter 060424
+		\DOTI{#1}%
+		\else%
+		\DOTIS{#1}%
+		\fi
+	}
+}
+% For the case \chapter*:
+\renewcommand*{\@makeschapterhead}[1]{%
+	\vspace*{-1cm}% Recuo vertical para maximizar aproveitamento da página
+	{\parindent \z@ \raggedright
+		\normalfont
+		\interlinepenalty\@M
+		\DOTIS{#1}
+		\vskip 40\p@
+	}
+}
+\makeatother
+%% ------------------------------------
+
+% -----------------------------------------
+% Pacotes Ambiente de comentário
+% -----------------------------------------
+\usepackage{comment}
+
+% ----------------------------------------- 
+% Tabelas
+% ----------------------------------------- 
+\usepackage{booktabs} % for much better looking tables
+\usepackage{multirow} % Permite uma célula de várias linhas
+% ----------------------------------------- 
+
+% ----------------------------------------- 
+% Enumerate com letras pré-fixas
+% ----------------------------------------- 
+\usepackage{paralist} 		% very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{enumitem}
+
+% ----------------------------------------- 
+% Equações
+% ----------------------------------------- 
+\usepackage{breqn} 		 % Garante quebra automático com \begin{dmath}, mesmo contador de \begin{equation}
+\usepackage{array} 		 % for better arrays (eg matrices) in maths
+\usepackage{subeqnarray} % Permite o use de subnumeração numa equação 1.a 1.b 1.c etc
+\usepackage{cancel} 	 % Permite o corte numa simplificação de expressão:
+% \cancel{expression}
+% \cancelto{value}{expression}
+
+% ----------------------------------------- 
+% Links Coloridos - Com seleção de uso de cores pelo usuário no arquivo base usando \toogletrue ou \togglefalse
+% ----------------------------------------- 
+\usepackage[colorlinks=true,
+linkcolor 		= red,
+anchorcolor 	= black,
+citecolor 		= green,
+filecolor 		= cyan,
+	% ==== Selecionando opção de links coloridos - Em parceria com comando "\newtoggle{LinksComCores}"
+	\iftoggle{LinksComCores}{%
+		%hidelinks
+	}{%
+		hidelinks
+	}
+	% ==== 
+]{hyperref} %Pacote para hyperlinks
+%hidelinks %opção para os links não serem coloridos, útil para a versão final do trabalho, também posso usar %linkcolor=black
+
+
+% ----------------------------------------- 
+% Links Coloridos - Com seleção de uso de cores (des)comentando "hidelinks"
+%% - Este código está dentro da classe ufabcFHZ#.cls
+%% - 	Ele é mantido aqui para conferência
+% ----------------------------------------- 
+%\usepackage[colorlinks=true,
+%linkcolor 		= red,
+%anchorcolor 	= black,
+%citecolor 		= green,
+%filecolor 		= cyan,
+%hidelinks
+%]{hyperref} %Pacote para hyperlinks
+%%hidelinks %opção para os links não serem coloridos, útil para a versão final do trabalho, também posso usar %linkcolor=black
+
+% ----------------------------------------- 
+% Inserção de código do Matlab
+% ----------------------------------------- 
+\usepackage[numbered]{mcode} 		% configure listings for Matlab
+
+%==== Pacote para url nas referências da ABNT
+%\usepackage[num,abnt-url-package=url]{abntcite}
+%====
+
+% for subfigures
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{capt-of}
+
+% to draw circuits
+\usepackage{circuitikz}
+\usepackage{tikz}
+
+\usepackage{makecell}
+% ----------------------------------------------------------
+% Fim Arquivo
+
+\usetikzlibrary{shapes.geometric,arrows.meta}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{fit}
+
+\tikzstyle{diam} = [diamond, aspect=2, draw, fill=red!40, text width=6em,text centered ]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, text width=3cm,text centered, rounded corners, minimum height=2em ]
+\tikzstyle{trap} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum height=2em, text centered, draw=red, fill=green!30]
+\tikzstyle{rect} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=red, fill=orange!30]
+\tikzstyle{line} = [draw, -latex]
+
+
+% for pseudo codes
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+\makeatletter
+\newcommand*{\algrule}[1][\algorithmicindent]{%
+  \makebox[#1][l]{%
+    \hspace*{.2em}% <------------- This is where the rule starts from
+    \vrule height .75\baselineskip depth .25\baselineskip
+  }
+}
+\newcount\ALG@printindent@tempcnta
+\def\ALG@printindent{%
+    \ifnum \theALG@nested>0% is there anything to print
+    \ifx\ALG@text\ALG@x@notext% is this an end group without any text?
+    % do nothing
+    \else
+    \unskip
+    % draw a rule for each indent level
+    \ALG@printindent@tempcnta=1
+    \loop
+    \algrule[\csname ALG@ind@\the\ALG@printindent@tempcnta\endcsname]%
+    \advance \ALG@printindent@tempcnta 1
+    \ifnum \ALG@printindent@tempcnta<\numexpr\theALG@nested+1\relax
+    \repeat
+    \fi
+    \fi
+}
+% the following line injects our new indent handling code in place of the default spacing
+\patchcmd{\ALG@doentity}{\noindent\hskip\ALG@tlm}{\ALG@printindent}{}{\errmessage{failed to patch}}
+\patchcmd{\ALG@doentity}{\item[]\nointerlineskip}{}{}{} % no spurious vertical space
+% end vertical rule patch for algorithmicx
+\makeatother
+
+% mathcal lowerletters
+%\usepackage{dutchcal}

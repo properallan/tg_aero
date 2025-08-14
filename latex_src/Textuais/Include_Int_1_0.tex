@@ -1,0 +1,173 @@
+%% =============================
+%%      IMPORTANTE
+%% ESTE ARQUIVO DEVE ESTAR SALVO COMO
+%%      UTF - 8
+%% =============================
+
+% ----------------------------------------------------------
+% Este capítulo é parte integrante do arquivo mestre
+% Relatorio_TCC_Mestrado_Base_VERSÃO_SUBVERSÃO_FHZ
+% ----------------------------------------------------------
+
+% ----------------------------------------------------------
+\chapter{Introduction}
+\label{cap_introduction}
+% ----------------------------------------------------------
+Definition of ML method
+
+"ML is a subfield of AI. It can be defined as a set of methods and algorithms for estimating the relationship between some inputs and outputs with the help of a number of trainable parameters. The learning of these parameters, that is, their optimization with respect to a given metric, is achieved in an iterative manner by comparing the model predictions against ground truth data or evaluation of the model performance." \cite{beckPerspective2021}.
+
+\section{Bibliography Review}
+
+A bibliometric review was conducted by search for the most relevant (to the authors knoledge) keywords in the field of present work scopus. These keywords were properly organized using the boolean operators in order to avoid returning uncorrelated works and to be broader as possible.
+They are:
+
+\definecolor{pastelgray}{rgb}{0.81, 0.81, 0.77}
+
+\begin{lstlisting}[breaklines,basicstyle=\ttfamily, columns=fullflexible, keepspaces=true, backgroundcolor = \color{pastelgray}, breakatwhitespace=false, numbers=none]
+    ( "flow reconstruction" OR "field reconstruction" OR "reconstruction" OR "flow field" OR "flow fields") AND ("surrogate" OR "metamodel" OR "meta model" OR "order reduction" OR "reduced order" OR "PCA" OR "POD" OR "SVD" OR "principal component analysis" OR "singular value decomposition" OR "proper orthogonal decomposition" OR "machine learning" OR "neural network" OR "neural networks" OR "gaussian process" OR "kriging" ) AND ( "compressible" OR "viscous" OR "turbulent" OR "RANS" OR "Navier-Stokes" OR "inviscid" OR "Euler" OR "fluid dynamic" OR "fluid dynamics" ) AND ( "data-driven" OR "data driven" )    
+\end{lstlisting}     
+
+\begin{circuitikz}\draw
+    (-5,2.9) node (flow_reconsctruction) {flow reconsctruction}
+    (-5,2.5) node (field_reconsctruction) {field reconsctruction}
+    (-5,2.1) node (reconsctruction) {reconsctruction}
+    (-5,1.7) node (flow field) {flow field}
+    (-5,1.3) node (flow fields) {flow fields}
+    (1,2.1) node[or port, yscale=1.75, xscale=1.75, number inputs=5] (myor1) {\fontsize{10}{10}\selectfont OR}
+    (flow_reconsctruction) -- (myor1.in 1)
+    (field_reconsctruction) -- (myor1.in 2)
+    (reconsctruction) -- (myor1.in 3)
+    (flow field) -- (myor1.in 4)
+    (flow fields) -- (myor1.in 5)
+
+    (-5,0.5)  node (surrogate) {surrogate}
+    (-5,0.1) node (metamodel) {metamodel}
+    (-5,-0.3) node (meta_model) {meta model}
+    (-5,-0.7) node (order_reduction) {order reduction}
+    (-5,-1.1) node (PCA) {PCA}
+    (-5,-1.5)  node (POD) {POD}
+    (-5,-1.9) node (SVD) {SVD}
+    (-5,-2.3) node (principal_component_analysis) {principal component analysis}
+    (-5,-2.7) node (proper_orthogonal_decomposition) {proper orthogonal decomposition}
+    (-5,-3.1) node (machine_learning) {machine learning}
+    (-5,-3.5) node (neural_network) {neural network}
+    (-5,-3.9) node (neural_networks) {neural networks}
+    (-5,-4.3) node (gaussian_process) {gaussian process}
+    (-5,-4.7) node (kriging) {kriging}
+    (2.5,-2.1) node[or port, yscale=5.0, xscale=3.0, number inputs=14] (myor2) {\fontsize{3.5}{0.5}\selectfont OR}
+    (surrogate) -- (myor2.in 1)
+    (metamodel) -- (myor2.in 2)
+    (meta_model) -- (myor2.in 3)
+    (order_reduction) -- (myor2.in 4)
+    (PCA) -- (myor2.in 5)
+    (POD) -- (myor2.in 6)
+    (SVD) -- (myor2.in 7)
+    (principal_component_analysis) -- (myor2.in 8)
+    (proper_orthogonal_decomposition) -- (myor2.in 9)
+    (machine_learning) -- (myor2.in 10)
+    (neural_network) -- (myor2.in 11)
+    (neural_networks) -- (myor2.in 12)
+    (gaussian_process) -- (myor2.in 13)
+    (kriging) -- (myor2.in 14)
+
+    (-5,-5.5) node (compressible) {compressible}
+    (-5,-5.9) node (viscous) {viscous}
+    (-5,-6.3) node (turbulent) {turbulent}
+    (-5,-6.7) node (RANS) {RANS}
+    (-5,-7.1) node (Navier_Stokes) {Navier-Stokes}
+    (-5,-7.5) node (inviscid) {inviscid}
+    (-5,-7.9) node (Euler) {Euler}
+    (-5,-8.4) node (fluid_dynamic) {fluid dynamic}
+    (-5,-8.9) node (fluid_dynamics) {fluid dynamics}
+    (1.5,-7.15) node[or port, yscale=3.35, xscale=3.0, number inputs=9] (myor3) {\fontsize{4.375}{4.375}\selectfont OR}
+    (compressible) -- (myor3.in 1)
+    (viscous) -- (myor3.in 2)
+    (turbulent) -- (myor3.in 3)
+    (RANS) -- (myor3.in 4)
+    (Navier_Stokes) -- (myor3.in 5)
+    (inviscid) -- (myor3.in 6)
+    (Euler) -- (myor3.in 7)
+    (fluid_dynamic) -- (myor3.in 8)
+    (fluid_dynamics) -- (myor3.in 9)
+    
+    (4.5,-2.1) node[and port, number inputs=3] (myand1) {AND}
+    (myor1.out) -- (myand1.in 1)
+    (myor2.out) -- (myand1.in 2)
+    (myor3.out) -- (myand1.in 3)
+
+    (6.0,-2.1) node (final_query) {final query}
+    (myand1.out) -- (final_query);
+\end{circuitikz}
+
+
+Numerical methods for multiphysics simulations of fluid dynamics are mature and widely used in industrial and academic applications. However, reducing the computational costs associated with these methods is still a must. Machine learning techniques like Kriging and Neural Networks have emerged as viable alternatives to build surrogate models for traditional numerical methods, with direct applications in tasks such as optimization, inverse problems, and uncertainty quantification. In this work, we explore a data-driven flow reconstruction method that can predict high-fidelity multiphysics flows using low-fidelity flow simulations as input.
+
+Previous research mostly focused on scalar and integrated quantities. In contrast, our work focuses on predicting entire flow fields, allowing the method to capture flow structures such as shock formation and highly non-linear heat flux distributions over supersonic Convergent-divergence nozzle walls.
+
+The number of variables required to represent multidimensional flow fields can be very large, resulting in impractically large neural networks or Kriging methods. To tackle this issue, we employ principal component analysis (PCA) decomposition as an order reduction technique. An important aspect of this work is studying the impact of the chosen reduced dimensionality on the accuracy of the surrogate model.
+
+In \cite{faliniReview2022} the authors addresses the problem of select the best rank $k$ of a SVD decompostion to accurately reconstruct a given dataset. Some methods ranges from evatualtion of variance or entropy content in the latent space. The authros also introduced new criteia known as Kullback-Leibler and anomaly detection. This highligh the importante of appropriate selection of reduced basis rank. In this work we focus on study the model senstivity with respect to basis dimension by evaluating the NRMSE, R2 and MAPE for the overall reconstruction strategy. 
+
+In \cite{huFlow2020} used convolutional adversarial networks  to predict the flow rate of a gas-liquid multiphase flowm, surpassing the performance of state-of-art flow rate prediction methods. Although MAPE metric achieved goog performance, as low as 8.36 \% we emphasize the method was made to predict the scalar quantity os mass flow rate, being flow reconstruction methods more capable, being able to predict the entire flow field. 
+
+In \cite{Boundary2018} the authors used neural networks to identify the dinamics of a 2-D PDE Burger`s equations. The authors work entirely in full dimensional, without any dimensionality reduction technique. The results, acccounts for lyapunov stability test, and show the model is stable and accure. In our view, the lack of dimensionaly reduction, could be a severe issue when dealing with high dimensional problems, as the one we are dealing with.
+
+In \cite{hillebrechtCertified2022} have developed mathematical rigorous upper bound error for the solution of a PDE using neural networks (PINNs). The method can't be directly applied to non-linear PDEs, and also can't be used to determine the lower limit for error. This highglighs the importance, difficult and necessity to more rigorous error analysis for machine learning methods.
+
+In \cite{nagaoCharacteristics2013}, the practica implications of Reynolds number in the coefficient discharge of flow in critical nozzles is studied. The Reynolds number fo this machine was estimated as $Re=\frac{4 \dot{m}_{th}}{\pi D_{th} \mu_0}$, since in our design experiment, the boundary conditions forced the flow to be sonic at throat, no appreciable impact regarding Re number is expected. 
+
+In \cite{dengDatadriven2021} the authors used a data-driven approach for flow reconstruction in the context of identification of nonlinear dynamical systems. The approach consists in using auto-encoder to reduce the model dimensionality, then discover the underline equations based on a restricted number of measurements data. Altough not exactely in the same context of present study, auto-enconders have show superior ability to deal with the latent variables, suprassing proper orthogonal decomposition methods.
+
+The advantages of dimensionaly reduction for machine learning method to predict fluid dynamic systems was also investigated by \cite{kontolatiLearning2023}. The authos used auto-enconder to reduce system dimensionality and have reported superior performance for the sistem identification when compared to full dimensional inferences.
+
+Despite recent advances in machine learning methods and its applications, the flow reconsctruction thecnique can also be applied using traditional numerical solvers, in \cite{zhangMicrostructure2021} the authors apply the flow reconstruction technique to reconstruct microestructures of a gas diffusion layer and its anisotropic transport properties, the method used sparse measurements and traditional numerical solvers to achieve the reconstruction, it is a good example of opportunity to use machine learning methods to reduce the computational cost of traditional numerical methods in flow reconsctruction problems.
+
+In \cite{casenaveMMGP2023} the authors applied the principal component analysi (PCA) as a dimensionality reduction technique to represend PDEs's solutions. To represent complex geometries and boundary conditions with ease, the methodolgy also made use of a novel mesh morphing technique to mapa the domain into a common morphed mesh an Gaussian process as a regression technique. As novelty, the method used finite element interpolation and shape embedding into low dimensional coordinates. 
+
+In the work of \cite{massaMultiresolution2022} a multiresolution recostructed of hypersonic heat flux was performed using spasrce measruments data ath mach 0.8 and mach 6. 
+
+\cite{aliClustering2021} Used proper orthogonal decomposition (POD) combined with linear discriminant analysis on a clustering framwork to indentify the best sensor placament for identify the unsteady dynamic in the wake of wind turbines. The results shows only evolution of point measruments and not the entire flow field, altought it higligths how a small number of sensor can be selected to best reconstruct a flow field using projection based techniques. 
+
+In \cite{barweyUsing2022} Used convolutional neural networks (CNN) to reconstruct particle imagage velocimeter (PIV) steady velocity fields in a gas turbine pre mixed swirl combustor. The model is purely data driven and used experimental data of hydroxyl(OH) planar laser induced Fluorescence (OH-PLIF) and PIV for training. No dimensionaly reduction technique was used in the training process,some kind of compressio is embeded in the encode-deconding process is embeded in the convolutional layers of the CNN.
+
+In \cite{beckPerspective2021} Turbulece is a highly complex and yet to be fully understood phenomena, this reasearch paper review some of advances in using machine learning methods to model such complex multiscale problem. Some of the oulined mode are methods for parameter identification, system identification and reconstruction of closure model. The ML models showed promissing results, with high accuraty subgrid fore terms prediction. Focused on incompressible turbulence modeling. Closure terms prediction and field deconvolution are key ares pointed.
+
+\cite{boltonApplications2019} used 2D  data from high-resolution ocean model, to emulate the real achiavavle quality of sattelite images, a low pass filter was applied in the training data. A convolutional neural networks were then trainend, to predict subsurface flow fields and eddy momentum forcing term from the degraded data. Showing possible application to improve model accuracy and also infer data from sparse observations.
+
+\cite{brightCompressive2013} used data from limited pressure measurements of the viscous  flow arround a cylinder to perform a flow field reconstruction. POD was used for dimensionality reduction and optimal basis construction. The performance metrics altough was not reported in terms of whole field data reconstruction, but only scalar quantity such as the Reynolds number prediction. 
+
+\cite{bukkaAssessment2021} used POD for low dimensional projection and convolutional neural networks to extract low-dimensional features. The ground truth data was numericaly generated by a finite element method to solve the unsteady navier stokes equation in compressible regime. The models investigated for system identification or inverse problem was proper orthogonal decomposition-recurrent neural network (POD-RNN) and convolutional recurrent eutoencoder network (CRAN). The recurrent neural network in question was a long short-term memory network (LSTM). The criteria for basis selection was the tradicional energy preservation. The CRAN models were found to suprass the POD-RNN in terms of accurately representation of highly nonlinear problemas such as the flow arrond two side-by-side cylinders. The computational cost of training the CRAN molde was howerve 16 times higher. Altough tailored to unsteady flow reconstruction, this work have many similarity with ours since, a low dimensionl representation of flow features must be stabilished prior to build a repressor model, in our case to predict flow fields for new unseen design parameters and in the case of the referenced study to extrapolate in time.
+
+\cite{carterDatadriven2021} is focused on the 2D unsteady flow arround atalled arifoils. Sparese sensor data are used to reconsctruction the flow field. POD was used for dimensionality reduction and, some stretegies were used to recover the basis from sparse measurmenta, simple linear approancs and also a shallow (3 -layers ) fully connected neural network. The results showed neural network perferomed better, no considerations about compution tim however were discussed.
+
+\cite{chengDatadriven2020} is also another work focused on unsteady flow. The method is data-driven and used generative adversarial networks to enconde and predict the flow field for unseen parameter. The model only udes one parameter to characterize the boundary condictions. The resultand recostructed flow field agreed well with high fidelity generted data with a significant computational cost reduction.
+
+\cite{demoNonintrusive2019} used an interpolation method to perform a parametric dimensionality reduction using POD and then reconstruct the incompressible flow arround a cylinder and the stress tensor field on double-T beam. The active subspace method proposed outperfomed traditional methos when using small number of principal components but have worse performance when using large number of principal components. No deteils abount the interpolation method were given and the performance of the model in predictive regime should be hohg affected by this interpolation technique.
+
+\cite{erichsonShallow2020} applied standard POD, and improved version of POD using ridge regression and a shawllow decoder (SD) to reduce dimensionality and reconstruct 2D spatial and temporal flow fields from sparse measruments. From natrual nonlinearity nature of SD, it outperform both POD methods in termos of accuracy. The studied cases includes numerical flow around a cylinder, experimental data for mesoscale sea surface temperature and numerical turbulent isotropic flow. 
+
+\cite{genevaMultifidelity2020} used deep learning to predict fully-turbulent systems. The proposed approach use data from low-fidelity simulations to infer high fidelity flow fields. Physical information of in the form of a loss function with PDE residual was also used, so this technique can be seeing as a hybrid model using both data and physical information.
+
+\cite{giannakisKoopman2018} used nonlinear Laplacian spectral analysis (NLSA) to build a weak formulation for the Koopman operator for the low dimensional representation of the dynamics of a fully turbulent 3D convection flow. Data was generaterd using DNS for the Rayleigh Bernard convection problem. NLSA can be viewed as POD in a delay-coordinate space. 
+
+\cite{hodgesCompartment2019} used a convolutional neural network to predict results of a 2D CFD zone fire model. The surrogate model reconstructed the temperature and velocity fields given scalar parameters for the simulations. The model is completly data-driven and no dimensionality reduction beyond the convolutional operations was performed.
+
+\cite{huangLimitedprojection2020} used volumetric tomographic Networkds (VT-Nets) to perforrm a three dimensional tomographic reconstruction of turbulent flame flows. The performance of the machine learning method was compared with traditional algebric reconstruction techniques (ART), showing the convolutional neurals networks were able to outperm traditional methods when a reduced number os 2D projections are used to reconstruct the whole 3D flame. It is alse insanely faster than traditional algorithms for inference tasks.
+
+\cite{jayaramanInterplay2019} used proper orthogonal decomposition (POD) to reduce timensionality and then used sparse measurments to performan a flow field reconstruction. THe sensor placement, quantity and system dimension was investigated to characterize the sparse reconstruction performance.
+
+\cite{kongDeep2021} performed a velocity field prediction on a scramjet isolator using deep learnin. The data-driven model used a convolutional neural network to stabilished a relashionship between wall pressure and velocity field. Experimental data was used for comparison and 3D RANS simulations were performed to build the datasets, altough the simulations were 3D only 2D slices of flow field were used to train and test the model. Despite the model being compressible with a lot of oblique schock formations, no attempt to recover the shock structures were made.
+
+\cite{liFlow2020} used a summetrical deep convolutional neural network to reconstruct the 2D steady state supersonic flow field in a cascade channel. The model is data-driven and used discreve pressure data to  reconstruct 2D flow field. The model were able to accurately reconstruct flow scructures present in the form of shock wave formation under unseen parameters.
+
+\cite{liuSupervised2021} show surrogate model can replace costly traditional solvers in a heat transfer problem, they effectively used fullly connected convolutional neural networks to perform
+flow field reconstruction of 2D heat transfer problem with nanofluid flowing in a microchannel with grooves. The data driven model used design parameters such as groove radius, relative depth, boundary condictions and a fluid parameter to infer 2D phycial fields of pressure, temeperature and velocity components. Neural networks showed superior performance when compared with tradicional surrogate models.
+
+\section{POD}
+
+The POD reduction, perhaps in a slightly modified form, is known throughout the literature alternatively as principal component analysis (PCA), empirical orthogonal functions (EOF), the Hotelling transform, or a Karhunen-Loeve expansion. Here, we will simply refer to it as POD.
+
+
+% ----------------------------------------------------------
+% Fim Arquivo

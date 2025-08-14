@@ -1,0 +1,87 @@
+%% =============================
+%%      IMPORTANTE
+%% ESTE ARQUIVO DEVE ESTAR SALVO COMO
+%%      UTF - 8
+%% =============================
+
+% ----------------------------------------------------------
+% Este capítulo é parte integrante do arquivo mestre
+% Relatorio_TCC_Mestrado_Base_VERSÃO_SUBVERSÃO
+% ----------------------------------------------------------
+
+
+%================ Pacotes para inserir código
+% ----------------------------------------- 
+% Inserção de código do Matlab
+% ----------------------------------------- 
+\usepackage[numbered]{mcode} 		% configure listings for Matlab
+
+% Deve estar na mesma pasta que o arquivo Base do relatório
+%%%% *** Bloco adicionado em mcode.sty - FHZ
+% % general definitions
+% \lstset{%
+% extendedchars = true,
+% inputencoding = latin1, % funciona com latin1
+%%%% ***
+
+% ----------------------------------------- 
+% en­ables the user to type­set pro­grams (pro­gram­ming code) 
+% ----------------------------------------- 
+\usepackage{listings}
+
+%%%%% ++++++ Referências e explicações:
+%http://tex.stackexchange.com/questions/68356/how-to-create-conditionals-in-a-document-class-for-latex
+%http://tex.stackexchange.com/questions/30512/how-to-insert-code-with-accents-with-listings
+%http://tex.stackexchange.com/questions/24528/having-problems-with-listings-and-utf-8-can-it-be-fixed
+%http://tex.stackexchange.com/questions/30512/how-to-insert-code-with-accents-with-listings
+%http://tex.searchalleasy.com/q/30512
+%http://stackoverflow.com/questions/1116266/listings-in-latex-with-utf-8-or-at-least-german-umlauts
+%http://www.mathworks.com/matlabcentral/fileexchange/8015-m-code-latex-package
+%%%%% ++++++ 
+
+% ----------------------------------------- 
+% --- Comando para definir estilo da \lstinputlisting
+% ----------------------------------------- 
+\lstset{basicstyle=\footnotesize}
+
+% ----------------------------------------- 
+% --- Comando para garantir acentuação correta para \lstinputlisting[language = C].
+% ----------------------------------------- 
+\lstset{literate = %
+	{Ö}{{\"O}}1
+	{Ä}{{\"A}}1
+	{Ü}{{\"U}}1
+	{ß}{{\s{s}}}1
+	{ü}{{\"u}}1
+	{ä}{{\"a}}1
+	{ö}{{\"o}}1
+	{~}{{\textasciitilde}}1
+	{ã}{{\~a}}1
+	{á}{{\'a}}1
+	{à}{{\`a}}1
+	{â}{{\^a}}1
+	{é}{{\'e}}1
+	{ê}{{\^e}}1
+	{í}{{\'\i}}1
+	{õ}{{\~o}}1
+	{ó}{{\'o}}1
+	{ô}{{\^o}}1
+	{ú}{{\'u}}1
+	{ç}{{\c c}}1
+	{Ã}{{\~A}}1
+	{Á}{{\'A}}1
+	{À}{{\`A}}1
+	{Â}{{\^A}}1
+	{É}{{\'E}}1
+	{Ê}{{\^E}}1
+	{Í}{{\'{I}}}1
+	{Õ}{{\~O}}1
+	{Ó}{{\'O}}1
+	{Ô}{{\^O}}1
+	{Ú}{{\'U}}1
+	{Ç}{{\c {C}}}1
+}
+%================
+
+% ----------------------------------------------------------
+% Fim Arquivo

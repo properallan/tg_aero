@@ -1,0 +1,16 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {chapter}{Lista de Símbolos}{21}{chapter*.8}%
+\contentsline {chapter}{Lista de Abreviaturas}{23}{chapter*.9}%
+\contentsline {chapter}{\numberline {1}Introdução}{27}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Fundamentação Teórica}{29}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Impactos financeiros de um produto defeituoso}{29}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}O valor de uma marca}{29}{subsection.2.1.1}%
+\contentsline {chapter}{\numberline {3}Metodologia}{31}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Cronograma de desenvolvimento do projeto}{32}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Aplicação da Metodologia}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Determinação do caso a ser estudado}{33}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Resultados}{35}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Determinação do caso a ser estudado}{35}{section.5.1}%
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{37}{chapter*.13}%
+\contentsline {chapter}{\numberline {6}Anexos}{39}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Anexo 01}{41}{chapter.7}%

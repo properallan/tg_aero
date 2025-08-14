@@ -1,0 +1,154 @@
+%% =============================
+%%      IMPORTANTE
+%% ESTE ARQUIVO DEVE ESTAR SALVO COMO
+%%      UTF - 8
+%% =============================
+
+% ----------------------------------------------------------
+% Este capítulo é parte integrante do arquivo mestre
+% Relatorio_TCC_Mestrado_Base_VERSÃO_SUBVERSÃO
+% Formatos com \caption acima do \includegraphics conforme todos exceto ABNT, e.g., IEEE
+% ----------------------------------------------------------
+
+% -----------------------------------------
+% Metodologia
+%
+% A ideia é utilizar a mesma sequência de entrada ter a opção de trocar a posição conforme a necessidade
+% 
+% O comando deve ser usado dentro do ambiente {figure} de forma que o comando \label{key} esteja dentro do ambiente e permita a melhor localização pelo editor LaTeX
+%
+% Forma de uso
+%
+% --------------------- Figuras Simples
+%	\begin{figure}[H]
+%		\figNameCommand{options includegraphics}{filename with path}{caption}
+%		\label{label_figure_1}
+%	\end{figure}
+%
+% --------------------- Figuras Compostas
+%	\begin{figure}[H]
+%		\figCapTwoSubfigInc{caption geral}
+%		{subcaption (a) }
+%		{width = 7cm, height = 6cm, trim = 0cm 0cm 0cm 0cm, clip = true}
+%		{figure with path}
+%		{subcaption (b) }
+%		{width = 7cm, height = 6cm, trim = 0cm 0cm 0cm 0cm, clip = true}
+%		{figure with path}
+%		\label{fig_label}
+%	\end{figure}
+%
+% --------------------- Comando Trim
+% trim = left bottom right top
+% -----------------------------------------
+
+% -----------------------------------------
+% Comandos para Figuras Simples
+% -----------------------------------------
+\newcommand{\figIncLongCap}[3]
+{ 	
+	\centering
+	\includegraphics[#1]{#2}
+	\caption{#3}
+}
+
+\newcommand{\figIncShortCap}[4]
+{ 	
+	\centering
+	\includegraphics[#1]{#2}
+	\caption[#4]{#3}
+}
+
+% -----------------------------------------
+% Comandos para Figuras Duplas Com Subfigures
+% -----------------------------------------
+\newcommand{\figTwoSubfigIncLongCap}[7]
+{ 	
+	\centering
+	\subfigure[#1]
+	{\includegraphics[#2]{#3}}
+	\quad
+	\subfigure[#4]
+	{\includegraphics[#5]{#6}}
+	\caption{#7}
+}
+
+\newcommand{\figTwoSubfigIncShortCap}[8]
+{ 	
+	\centering
+	\subfigure[#1]
+	{\includegraphics[#2]{#3}}
+	\quad
+	\subfigure[#4]
+	{\includegraphics[#5]{#6}}
+	\caption[#8]{#7}
+}
+
+% -----------------------------------------
+% Comandos para Figuras Triplas em Cascata Com Subfigures
+% -----------------------------------------
+\newcommand{\figThreeSubfigIncCap}[4]
+{ 	
+	\centering
+	\SubfigSubcapSubfigInc{#1}
+	\quad
+	\SubfigSubcapSubfigInc{#2}
+	\quad
+	\SubfigSubcapSubfigInc{#3}
+	\quad
+	\caption{#4}
+}
+
+% -----------------------------------------
+% Comandos Base para Figuras Múltiplas em Cascata Com Subfigures
+% -----------------------------------------
+\newcommand{\SubfigcapSubfigInc}[3]
+{ 	
+	\subfigure[#1]
+	{\includegraphics[#2]{#3}} 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ===== Magno old versions ===== %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% -----------------------------------------
+% Comandos para Figuras Duplas sem Subfigure
+% -----------------------------------------
+\newcommand{\figDob}[5]
+{   
+	\centering
+	\includegraphics[#1]{#2}
+	\includegraphics[#3]{#4} \\
+	\vspace*{0.2cm}
+	(a) \hspace{6.5cm} (b) %\\
+	\caption{#5}
+}
+
+% -----------------------------------------
+% Comandos para Figuras Triplas sem Subfigure
+% -----------------------------------------
+\newcommand{\figTre}[7]
+{   
+	\centering
+	\includegraphics[#1]{#2}
+	\includegraphics[#3]{#4} \\
+	\vspace*{0.2cm}
+	(a) \hspace{6.5cm} (b) \\
+	\includegraphics[#5]{#6} \\
+	\vspace*{0.2cm}
+	(c)
+	\caption{#7}
+}
+
+\newcommand{\figTreV}[7]
+{   
+	\centering
+	\includegraphics[#1]{#2}
+	\includegraphics[#3]{#4}
+	\includegraphics[#5]{#6}   \\
+	\vspace*{0.2cm}
+	(a) \hspace{4.cm} (b) \hspace{4.cm} (c)
+	\caption{#7}
+}
+% ----------------------------------------------------------
+% Fim Arquivo

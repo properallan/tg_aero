@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Relatorio_TCC_Mestrado_Base_1_0_FHZ.aux
+A level-1 auxiliary file: Pre-Textuais/Include_Sim_1_0.aux
+A level-1 auxiliary file: Pre-Textuais/Include_Abv_1_0.aux
+A level-1 auxiliary file: Textuais/Include_Int_1_0.aux
+A level-1 auxiliary file: Textuais/Include_Rev_1_0.aux
+A level-1 auxiliary file: Textuais/Include_Met_1_0.aux
+A level-1 auxiliary file: Textuais/Include_Mod_1_0.aux
+A level-1 auxiliary file: Textuais/Include_Con_1_0.aux
+The style file: Bibliografia/abntFHZ5.bst
+Database file #1: Bibliografia/Bibliografia_modelo.bib
+You've used 1 entry,
+            2525 wiz_defined-function locations,
+            634 strings with 4741 characters,
+and the built_in function-call counts, 723 in all, are:
+= -- 69
+> -- 3
+< -- 10
++ -- 38
+- -- 1
+* -- 36
+:= -- 59
+add.period$ -- 6
+call.type$ -- 1
+change.case$ -- 7
+chr.to.int$ -- 0
+cite$ -- 1
+duplicate$ -- 94
+empty$ -- 51
+format.name$ -- 7
+if$ -- 156
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 5
+num.names$ -- 5
+pop$ -- 20
+preamble$ -- 1
+purify$ -- 1
+quote$ -- 0
+skip$ -- 42
+stack$ -- 0
+substring$ -- 34
+swap$ -- 58
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 9
+warning$ -- 0
+while$ -- 6
+width$ -- 0
+write$ -- 3

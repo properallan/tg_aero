@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: cobem2023_template.aux
+The style file: abcm.bst
+Database file #1: bibfile_template.bib
+Warning--entry type for "EPE2022" isn't style-file defined
+--line 88 of file bibfile_template.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 13 entries,
+            3271 wiz_defined-function locations,
+            735 strings with 8712 characters,
+and the built_in function-call counts, 7949 in all, are:
+= -- 600
+> -- 386
+< -- 10
++ -- 157
+- -- 135
+* -- 559
+:= -- 1244
+add.period$ -- 43
+call.type$ -- 13
+change.case$ -- 112
+chr.to.int$ -- 12
+cite$ -- 13
+duplicate$ -- 617
+empty$ -- 570
+format.name$ -- 170
+if$ -- 1553
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 131
+newline$ -- 75
+num.names$ -- 52
+pop$ -- 315
+preamble$ -- 1
+purify$ -- 97
+quote$ -- 0
+skip$ -- 221
+stack$ -- 0
+substring$ -- 211
+swap$ -- 316
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 111
+warning$ -- 0
+while$ -- 43
+width$ -- 0
+write$ -- 175
+(There was 1 warning)

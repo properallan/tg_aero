@@ -1,0 +1,11 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Numerical domains for the grid independence study. The table details the number of nodes in the axial ($N_x$) and radial ($N_y$) directions, the total number of cells ($N_{cells}$), the grid refinement ratio ($r$), and the approximate near-wall grid spacing in wall units ($Y^{+}$) \citep {moreira2023}.}}{32}{table.caption.16}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Results for the grid independence study for average heat flux ($q$), pressure ($p$), and wall temperature ($T$). The analysis confirms asymptotic convergence, justifying the selection of Grid 2 \citep {moreira2023}.}}{34}{table.caption.18}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Summary of the dataset generation and partitioning for machine learning model development.}}{36}{table.caption.20}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Computational cost and accuracy comparison. The table shows the CPU time for training and a single evaluation, the speedup relative to the high-fidelity model, and the Normalized Root Mean Squared Error for reconstructed Temperature (NRMSE-T) and wall heat flux (NRMSE-q) for the test dataset \citep {moreira2023}.}}{46}{table.caption.32}%
+\addvspace {10\p@ }

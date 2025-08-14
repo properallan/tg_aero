@@ -1,0 +1,226 @@
+%% =============================
+%%      IMPORTANTE
+%% ESTE ARQUIVO DEVE ESTAR SALVO COMO
+%%      UTF - 8
+%% =============================
+
+% ----------------------------------------------------------
+% Este capítulo é parte integrante do arquivo mestre
+% Relatorio_TCC_Mestrado_Base_VERSÃO_SUBVERSÃO_FHZ
+% ----------------------------------------------------------
+\definecolor{pastelgray}{rgb}{0.81, 0.81, 0.77}
+
+% ----------------------------------------------------------
+\chapter{Introduction}
+\label{chap:Introduction}
+% ----------------------------------------------------------
+
+In recent years, there has been a remarkable growth of interest across academic, industrial, and public sectors in Artificial Intelligence (AI)\abbrev{AI}{Artificial Intelligence} solutions. This enthusiasm can largely be attributed to the unexpected breakthroughs made by Large Language Models (LLMs)\abbrev{LLM}{Large Language Model}, which have surpassed the expectations of even the most optimistic researchers, showing signs of what could be the first evidence of sparks of Artificial General Intelligence (AGI)\abbrev{AGI}{Artificial General Intelligence} \citep{Bubeck2023}.
+
+For this reason, it is a common error to wonder this model are ready to resolve any more scientific/techinical task, in reasearch, engineering and optimization without any human intervation. We strongly aknolege this work is indeed focused on a more specialized Machine Learning ML models, also designated as narrow AI. Namely the models we will investigate are built to handle fluid dyanmics numrical simulations.
+
+These models, also categorized as broad AI, have the potential do deeply change human society due to its hability to handle a wide range of complex human related tasks such as cognition, reasoning, and planning. They are increasingly integrated into various aspects of our daily lives, with companies continually incorporating them into their operations. The success of these models in handling such ubiquitous tasks is largely attributed to advancements in computer processing power, expanded storage capacities, high-speed internet connectivity, and the availability of large datasets, alongside the continuous refinement of Machine Learning (ML) \abbrev{ML}{Machine Learning} algorithms.
+
+Moreover, many of these ML algorithms driving this AI renaissance find direct applications in the field of narrow AI, particularly in tasks such as modeling fluid dynamics, which is the primary focus of our current work. To list some of these algorithms, we refer to dimensionality reduction, backpropagation, and multivariate regression. These advancements enable the creation of more accurate reduced-order surrogate models, providing fast approximated numerical solutions to problems in aerothermodynamics simulation, design optimization, model inference, and the flow reconstruction method presented herein.
+
+Oposed to broad AI, the main focus of narrow AI is to use ML algorithms to learn from data and produce specialized models able to perfoms tasks without being explicetly programmed for it, in a process called training, which is illustrated in Figure \eqref{fig:training_flowchart}.
+
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}[node distance=1cm and 1cm]
+		%style
+		\tikzstyle{data} = [draw, fill=yellow!10, 
+			%text width=3cm,
+			%text centered, 
+			dashed,
+			rounded corners, 
+			%minimum height=2em,
+			inner xsep=3mm,
+			inner ysep=2mm, 
+			fit=#1 ]
+
+		\tikzstyle{training} = [draw, fill=cyan!10, 
+			%text width=3cm,
+			%text centered, 
+			dashed,
+			rounded corners, 
+			%minimum height=2em,
+			inner xsep=3mm,
+			inner ysep=2mm, 
+			fit=#1 ]
+
+		% draw nodes
+		\node [block] (loss) {$\mathcal{L}\left( \mathbf{y}, \mathbf{\tilde y} \right)$};
+		\node [block, above=of loss, align=center] (y_) {Approximation\\$\mathbf{\tilde y}$};	
+		\node [block, left=of y_, align=center, label={[name=training_label, xshift=20]above right:{Training}}] (model) {Model\\$\Phi(\mathbf{X},\boldsymbol{\theta})$};
+		\node [rect, left=of loss, align=center, xshift=-120 ] (y) {High fidelity data\\$\mathbf{y}$};
+		\node [rect, left=of model, align=center, label={[name=data_label]above:{Training Data}}] (X) {Low fidelity data\\$\mathbf{X}$};
+		\node [diam, below=of loss, align=center] (stop) {Stop criteria?};
+		\node [trap, left=of stop, align=center, xshift=-110] (trained_model) {Trained Model\\$\Phi(\mathbf{X},\boldsymbol{\theta}) =  \mathbf{\tilde y}$};
+	
+		% define somme first used symbols
+		\symbl{$\mathbf{X}$}{Input or \textit{low fidelity} dataset matrix.}
+		\symbl{$\mathbf{y}$}{Target or \textit{high fidelity} dataset matrix.}
+		\symbl{$\mathcal{L}$}{Loss function}
+	
+		% connect nodes
+		\draw [line] (X) -- (model);
+		\draw [line] (model) -- (y_);
+		\draw [line] (y_) -- (loss);
+		\draw [line] (loss) -- (stop);
+		\draw [line] (stop.east) -| node[above, xshift=-10] {no} ++(east:0.7) |-  (north:4) -| node[below, xshift=25] {update $\boldsymbol{\theta}$} (model.north);
+		\draw [line] (stop) -- node[above] {yes} (trained_model);
+		\draw [line] (y) -| (model);
+		\draw [line] (y) -- (loss);
+
+
+		\scoped[on background layer]{
+    		\node (t1) [training=(model) (y_) (loss) (stop) (training_label)] {};
+			\node (d1) [data=(X) (y) (data_label)] {};
+		};
+
+	\end{tikzpicture}
+	\caption{Overal training flowchart for a generic data-driven supervised learning algorithm, the model is trained to map from a reduced dimensional representation $\Phi(\mathbf{X},\boldsymbol{\theta})$ to an approximated solution in the high dimensional space $\mathbf{\tilde y}$.}
+
+	\label{fig:training_flowchart}
+	
+	\end{figure} 
+
+For instance, in the flow reconstruction method presented herein, the model is trained to reconstruct high fidelity flow fields solutions ($\mathbf{X}$) by using low fidelity data ($\mathbf{y}$). Dimensionaly reduction algorithms are used to handle data, while backpropagation is used to optimize the weights of the model.
+
+Once trained, the flow reconstruction model can be represented as in the flowchart of Figure \ref{fig:learned_flowchart}. The learned model ($\Phi(\mathbf{X},\boldsymbol{\theta})$) can then predict approximate solutions ($\mathbf{\tilde y}$) in a fraction of the time and with comparable accuracy of traditional numerical solvers, enaling intense computing tasks such as optimization to be performed in a reasonable amount of time and computing resources. 
+	
+\begin{figure}[ht]
+	\centering
+	\begin{tikzpicture}[node distance=1cm and 1cm]
+		\tikzstyle{test} = [draw, fill=red!10, 
+			%text width=3cm,
+			%text centered, 
+			dashed,
+			rounded corners, 
+			%minimum height=2em,
+			inner xsep=3mm,
+			inner ysep=2mm, 
+			fit=#1 ]
+
+		\tikzstyle{inference} = [draw, fill=green!10, 
+			%text width=3cm,
+			%text centered, 
+			dashed,
+			rounded corners, 
+			%minimum height=2em,
+			inner xsep=3mm,
+			inner ysep=2mm, 
+			fit=#1 ]
+		
+		\tikzstyle{approximation} = [draw, fill=orange!10, 
+			%text width=3cm,
+			%text centered, 
+			dashed,
+			rounded corners, 
+			%minimum height=2em,
+			inner xsep=3mm,
+			inner ysep=2mm, 
+			fit=#1 ]
+		
+		% draw nodes
+		\node [rect, align=center, label={[name=test_label]above:{Test/Useeing Data}}] (X) {Low fidelity data\\$\mathbf{X}$};
+		\node [trap, right=of X, align=center, label={[name=inference_label]above:{Inference}}] (model) {Model\\$\Phi(\mathbf{X}, \boldsymbol{\theta})$};
+		\node [rect, right=of model, align=center, label={[name=approximation_label]above:{Reconstructed approximation}}, xshift=26.5] (y_) {High fidelity data\\$\mathbf{\tilde y}$};
+
+		%\node [diam, right=of loss, align=center] (stop) {Stop?};
+	
+		% define somme first used symbols
+		\symbl{$\mathbf{X}$}{Input or \textit{low fidelity} data}
+		\symbl{$\mathbf{y}$}{Target or \textit{high fidelity} data.}
+		\symbl{$\mathcal{\tilde{y}}$}{Approximated target or \textit{high fidelity} data.}
+	
+		% connect nodes
+		\draw [line] (X) -- (model);
+		\draw [line] (model) -- (y_);
+	
+		% background boxes
+		\scoped[on background layer]{
+    		\node (t1) [test=(X) (test_label)] {};
+			\node (i1) [inference=(model) (inference_label)] {};
+			\node (a1) [approximation=(y_) (approximation_label)] {};
+		};
+	\end{tikzpicture}
+	\caption{Inference flowchart for the fast prediction of an approximated solution $\mathbf{\tilde y}$for and unseeing low fidelity data sample $\mathbf{X}$.}
+	\label{fig:learned_flowchart}
+	
+	\end{figure}
+
+Despite to much research and efforts have beein put on developing machine learning models for fluid dynamics, its is still an ongoing research field with many challenges to be overcome.
+
+Specifically, ML, as a subfield of AI, is dedicated to the development of algorithms capable of utilizing data and, more recently, conservation laws, to  optimize the weights or coefficients of a model defining a given input-output operation or mapping function.
+
+Techniques such as backpropagation and dimensionality reduction, largelly developed due to interest id broad AI, find direct application in narrow AI, particularly in tasks such as modeling fluid dynamics. These advancements enable the creation of more accurate reduced-order surrogate models, to find fas approximated numerial solutions to problems in aerothermodynamics simulation, design optimization, model inference, and also the flow reconstruction method herein presented.
+
+\section{Compressible Nozzle Flow}
+
+
+\section{Motivation}
+
+The main motivation for this thesis is to develop efficient reduced order surrogate models for fluid dynamics simulations. 
+
+Numerical methods for solving problems in fluid dynamics and thermodynamics have reached an impressive level of maturity, supported by a plethora of robust mathematical formulations. These methods encompass a diverse array of techniques, including finite differences, finite volumes, and finite elements, which are widely accessible through advanced commercial solvers or highly adopted open-source projects. Consequently, these methods have become common in the daily routines of scientific research and engineering applications.
+
+Despite the continuous advancement in available computing resources, the pursuit of more efficient methods remains a critical challenge. Many applications, such as design optimization, control, and uncertainty quantification, suffer from the well-known curse of dimensionality, exponentially increasing the required computing resources as more degrees of freedom are modeled. 
+
+Metamodeling techniques are frequently used to reduce the computational costs associated with the direct evaluation of high cost models by using surrogates. Common methods ranges from diferent machine learning methods such as Neural Networks, guassian 
+
+In the scope of projec 37 - Design and Optimzation of Centrifugal Compressors Operatiog With supercritical CO2 (Atualizar!) several groups developed simulation methods for turbomachinery ranging in terms of the numerical method used and also in its fidelity level, to metion some of them, we have developed 1D, 2D and 3D simulations, using commerial solvers suchs as ANSYS FLuent and COMSOL, we also use open source solvers such as OpenFoam and Fenics, there are also in-house codes for 1D and 2D low fidelity fast solvers. It is interesting to use this distinct data with a non-intrusive methodology able to perform data-fusion and predict the more accurate flow fields for the 3D viscous flow. This is the main objective of the flow reconstruction methodology. It also opens paths to ultize future experimental data in the form of sparse measurements to perform whole flow field reconstructions.
+
+Overall flowchart of the flow reconstruction Training procedure
+
+\section{Objectives}
+
+Facing the the challenge we presented previously. The main objectives of this work can be listed as follow:
+
+\begin{itemize}
+\item
+
+Reconstruct the multiphysics and multidimensional flow field in a geometrically variable transonic nozzle.
+
+The model should handle flow fields of varying dimensions and degrees of complexity. This study focuses on the reconstruction of 2D steady flow fields and the heat transfer characteristics in a nozzle using 1D flow field data. The flow under consideration experiences shock formation due to variations in both thermodynamic boundary conditions and geometric configurations.
+
+\item 
+
+Implement an integrated end-to-end data-driven flow reconstruction methodology.
+
+The model should be designed with generality in mind, allowing for extension to any other dataset or problem. The entire process, including pre-processing, processing, evaluation, and post-processing, must seamlessly adopt a data-driven approach. Furthermore, the model should be easily accessible and adoptable by the community.
+
+\item 
+
+Perform a dimensionality reduction study.
+
+While numerous flow reconstruction methods have been published, there has been limited discussion regarding the sensitivity of model accuracy with respect to the chosen basis size for dimensionality reduction using truncated singular value decomposition. This study aims to investigate the impact of the number of selected modes on overall performance.
+
+\item
+	Compare the performance of neural networks with the Gaussian process method.
+
+	Another important contribution is to evaluate and compare the performance of neural networks with the more traditional Gaussian process model. This comparison was conducted across various scenarios, considering differences in dataset sizes, the number of principal components used in dimensionality reduction, and other hyperparameters.
+
+	\item 
+	
+	Hyperparameter tuning of the model.
+
+	For the Gaussian process, hyperparameter tuning was achieved by optimizing kernel parameters. In the case of the neural network, the number of layers, number of neurons, and activation function were optimized. As a result, guidelines for the best neural network architecture and hyperparameters were determined.
+
+\end{itemize}
+
+\section{Organization}
+
+The present study was organized as follow 
+
+\begin{itemize}
+\item Chapter 1 is an introduction of the nozzle flow problem and associted.
+\item Chapter 2 made a bibliography review in the field.
+\item Chapter 3 is a case study.
+\item Chapter 4 is the main conclusion.
+\end{itemize}
+
+%\section{Nozzle Flow}
+
+%\section{Flow Reconstruction Methodology}

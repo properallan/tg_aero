@@ -1,0 +1,42 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{20}{chapter.1}%
+\contentsline {section}{\numberline {1.1}The Convergent-Divergent Nozzle}{20}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Physics of Convergent-Divergent Nozzle Flow}{20}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Aerothermodynamic Design}{21}{section.1.3}%
+\contentsline {section}{\numberline {1.4}The Computational Bootleneck: Accuracy vs. Cost}{22}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Multifidelity Surrogate Models}{23}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Objectives and Contributions}{24}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Dissertation Outline}{25}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Compressible Flow and Nozzle Aerothermodynamics}{26}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Governing Equations of Fluid Dynamics}{26}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}The Euler Equations}{26}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}The Reynolds-Averaged Navier-Stokes (RANS) Equations}{26}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Conjugate Heat Transfer and Solid Conduction}{28}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Computational Framework}{30}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Low-Fidelity Simulation: The Quasi-1D Euler Solver}{30}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Implementation and Numerical Method}{30}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Numerical Verification}{30}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}High-Fidelity Simulation: The 2D RANS-CHT Approach}{31}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}The SU2 CFD Suite}{31}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Model Setup}{31}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Numerical Verification: Grid Independence Study}{32}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Numerical Validation with Experimental Data}{34}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Parametric Data Generation for Model Training}{35}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Data-Driven Flow Reconstruction via Reduced Order Modeling}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Reduced Order Modeling (ROM)}{37}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Proper Orthogonal Decomposition (POD)}{37}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}The Snapshot Method}{38}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Application and Efficacy}{38}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Surrogate Modeling for Latent Space Mapping}{39}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}The Artificial Neural Network (ANN) Approximator}{40}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}The Kriging Interpolator}{41}{subsection.4.3.2}%
+\contentsline {chapter}{\numberline {5}Analysis of Model Performance and Computational Efficiency}{43}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Flow Field Reconstruction Accuracy}{43}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Neural Network Reconstruction}{43}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}A Comparative Assessment of Surrogate Modeling Techniques}{46}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Evaluation of Computational Gains and Engineering Impact}{47}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Synthesis, Conclusions, and Future Directions}{48}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Synthesis of Findings}{48}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Concluding Remarks}{48}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Future Directions and Broader Impact}{49}{section.6.3}%
+\contentsline {chapter}{Bibliography}{51}{chapter*.33}%

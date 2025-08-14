@@ -1,0 +1,89 @@
+%===========================================================
+% 			Lista de Símbolos
+%===========================================================
+
+\chapter*{List of Symbols}
+
+% --- Roman Symbols ---
+\begin{itemize}
+\item[$a_j$] Vetor de coeficientes do POD para o snapshot $j$
+\item[$\mathbf{a}_h, \mathbf{a}_l$] Vetores de coeficientes do POD de alta e baixa fidelidade
+\item[$b_j$] Termo de bias do neurônio $j$ na rede neural
+\item[$c_{p,s}$] Capacidade de calor específica do sólido
+\item[$d_h, d_l$] Dimensão do espaço latente de alta e baixa fidelidade
+\item[$e$] Energia interna específica
+\item[$E$] Energia total por unidade de massa
+\item[$E_{tot}$] Energia total por unidade de volume
+\item[$f$] Função de ativação da rede neural
+\item[$f_{\text{surrogate}}$] Função do modelo substituto genérico
+\item[$\mathbf{F}$] Vetor de fluxo das equações de Euler
+\item[$\mathbf{F}^c, \mathbf{F}^v$] Vetores de fluxo convectivo e viscoso das equações de Navier-Stokes
+\item[$\mathbf{I}$] Tensor identidade
+\item[$k$] Condutividade térmica
+\item[$\mathbf{K}$] Matriz de covariância do Kriging
+\item[$\mathbf{k}_*$] Vetor de covariância do Kriging para um novo ponto
+\item[$\mathcal{L}$] Função de custo (loss) da rede neural
+\item[$m_h, m_l$] Dimensão (número de graus de liberdade) de um snapshot
+\item[$M$] Número de Mach
+\item[$n$] Número total de snapshots no dataset
+\item[$N_{cells}$] Número total de células na malha
+\item[$N_{nodes}$] Número de nós na malha 2D
+\item[$N_{wall}$] Número de pontos na parede
+\item[$N_{1D}$] Número de pontos na malha 1D
+\item[$o_j$] Saída (output) do neurônio $j$
+\item[$p$] Pressão estática
+\item[$p_{GCI}$] Ordem de convergência observada no estudo de malha
+\item[$q$] Fluxo de calor escalar ou médio
+\item[$\mathbf{q}$] Vetor de fluxo de calor no fluido
+\item[$\mathbf{q}_s$] Vetor de fluxo de calor difusivo no sólido
+\item[$\mathbf{Q}$] Vetor de termos-fonte das equações de Euler
+\item[$r$] Número de modos POD retidos na base truncada
+\item[$R$] Constante específica do gás
+\item[$\mathcal{R}$] Resíduo das equações de Navier-Stokes
+\item[$S$] Área da seção transversal do bocal
+\item[$t$] Tempo
+\item[$T$] Temperatura
+\item[$u$] Velocidade axial no escoamento 1D
+\item[$\mathbf{u}_i$] Vetor do $i$-ésimo modo espacial do POD
+\item[$\mathbf{U}$] Matriz de vetores singulares à esquerda (modos POD) do SVD
+\item[$U_s$] Variável conservada na equação de condução de calor
+\item[$\mathbf{v}$] Vetor de velocidade
+\item[$\mathbf{V}$] Matriz de vetores singulares à direita do SVD
+\item[$w_{ij}$] Peso da conexão entre os neurônios $i$ e $j$
+\item[$\mathbf{W}$] Vetor de variáveis conservadas (Euler e RANS)
+\item[$\mathbf{x}_h, \mathbf{x}_l$] Vetores de snapshot de alta e baixa fidelidade
+\item[$\mathbf{X}_h, \mathbf{X}_l$] Matrizes de snapshot de alta e baixa fidelidade
+\item[$\mathbf{y}$] Vetor de valores observados no treinamento do Kriging
+\item[$Y^{+}$] Distância adimensional à parede
+\end{itemize}
+
+% --- Greek Symbols ---
+\begin{itemize}
+\item[$\gamma$] Razão entre os calores específicos
+\item[$\mu$] Viscosidade dinâmica molecular
+\item[$\mu_t$] Viscosidade turbulenta (de "eddy")
+\item[$\mu_{\text{eff}}$] Viscosidade efetiva
+\item[$\hat{\mu}$] Média estimada do processo Gaussiano (Kriging)
+\item[$\rho$] Densidade
+\item[$\rho_s$] Densidade do sólido
+\item[$\sigma_i$] Valor singular $i$ da matriz de snapshots
+\item[$\mathbf{\Sigma}$] Matriz diagonal de valores singulares
+\item[$\boldsymbol{\tau}$] Tensor de tensões viscosas
+\item[$\mathbf{\Psi}_r$] Base de modos POD truncada com $r$ modos
+\end{itemize}
+
+% --- Subscripts and Superscripts ---
+\begin{itemize}
+\item[$(\cdot)_0$] Condição de estagnação
+\item[$(\cdot)_h$] Relativo à alta fidelidade (High-Fidelity)
+\item[$(\cdot)_l$] Relativo à baixa fidelidade (Low-Fidelity)
+\item[$(\cdot)_s$] Relativo ao domínio sólido (Solid)
+\item[$(\cdot)_{in}$] Condição de entrada (Inlet)
+\item[$(\cdot)_{exit}$] Condição de saída (Exit)
+\item[$(\cdot)_{j}$] Índice do $j$-ésimo snapshot ou neurônio
+\item[$(\cdot)_{i,j}$] Componente $i,j$ de uma matriz ou tensor
+\item[$(\cdot)^T$] Operador de transposição
+\item[$(\cdot)^c$] Relativo ao fluxo convectivo
+\item[$(\cdot)^v$] Relativo ao fluxo viscoso
+\item[$\hat{(\cdot)}$] Valor previsto ou estimado
+\end{itemize}
