@@ -1,17 +1,17 @@
 # Fdb version 4
-["bibtex tg"] 1755117622.80715 "tg.aux" "tg.bbl" "tg" 1755174169.18064 0
+["bibtex tg"] 1755117622.80715 "tg.aux" "tg.bbl" "tg" 1755177278.98811 0
   "./Bibliografia/abnt2023.bst" 1755172863.46946 28882 6d261bd0038e81a7dd092a44bb4a448c ""
   "./Bibliografia/library.bib" 1755172863.46768 14588 d37ab67e69035b84208ec30891f9ec24 ""
-  "Pre-Textuais/list_of_acronyms.aux" 1755174168.06437 1260 7616b738b5b75fe312dbf12af42f7218 "pdflatex"
-  "Pre-Textuais/list_of_symbols.aux" 1755174168.08015 1259 7fded40af0d94b66d94b979dadee49f0 "pdflatex"
-  "tg.aux" 1755174168.842 28368 3a963c9248a911a0e85e0900ae975870 "pdflatex"
+  "Pre-Textuais/list_of_acronyms.aux" 1755177278.04425 1260 7616b738b5b75fe312dbf12af42f7218 "pdflatex"
+  "Pre-Textuais/list_of_symbols.aux" 1755177278.06025 1259 7fded40af0d94b66d94b979dadee49f0 "pdflatex"
+  "tg.aux" 1755177278.69606 28368 3a963c9248a911a0e85e0900ae975870 "pdflatex"
   (generated)
   "tg.bbl"
   "tg.blg"
   (rewritten before read)
-["pdflatex"] 1755174165.94568 "/Users/ppiper/Documents/Sync/tg_aero/latex_src/tg.tex" "tg.pdf" "tg" 1755174169.18093 0
+["pdflatex"] 1755177275.84646 "/Users/ppiper/Documents/Sync/tg_aero/latex_src/tg.tex" "tg.pdf" "tg" 1755177278.98835 0
   "../latex_src/Figuras/POD_energy.pdf" 1755172863.52444 36896 592fc5135c28ab5a6ea04457dbc009db ""
-  "/Users/ppiper/Documents/Sync/tg_aero/latex_src/tg.tex" 1755173726.03004 83704 9b5409568ac8d19b04f79f4db510eea4 ""
+  "/Users/ppiper/Documents/Sync/tg_aero/latex_src/tg.tex" 1755177270.30203 83712 2717c50198622c46f160a7872e87d73a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -429,19 +429,19 @@
   "NewCommands/Input_NewCommand_Figures.tex" 1755172863.43893 3792 fde5ad26d6cff3f8aefd0913ee80e8c9 ""
   "Pacotes/Input_Pacotes.tex" 1755172863.53467 8230 b3a1404c8e66d75c4790514c0d86f3be ""
   "Pacotes/Input_Pacotes_Listings.tex" 1755172863.5351 2612 ebaaad845246655293d8b1fc2b968d2b ""
-  "Pre-Textuais/list_of_acronyms.aux" 1755174168.06437 1260 7616b738b5b75fe312dbf12af42f7218 "pdflatex"
+  "Pre-Textuais/list_of_acronyms.aux" 1755177278.04425 1260 7616b738b5b75fe312dbf12af42f7218 "pdflatex"
   "Pre-Textuais/list_of_acronyms.tex" 1755172863.42558 1078 644eb33fbd85b2154838a773fb9cb178 ""
-  "Pre-Textuais/list_of_symbols.aux" 1755174168.08015 1259 7fded40af0d94b66d94b979dadee49f0 "pdflatex"
+  "Pre-Textuais/list_of_symbols.aux" 1755177278.06025 1259 7fded40af0d94b66d94b979dadee49f0 "pdflatex"
   "Pre-Textuais/list_of_symbols.tex" 1755174156.86587 4017 7fcefda3bd6881af7080794524284d17 ""
   "Textuais/Images/ufabclogo.png" 1755172863.454 279321 5f0bcb4a7a78d6e27ae75c24cf4beb63 ""
   "mcode.sty" 1755172863.3988 12230 b5b619d98e5916d3761a76c811183b4a ""
-  "tg.aux" 1755174168.842 28368 3a963c9248a911a0e85e0900ae975870 "pdflatex"
+  "tg.aux" 1755177278.69606 28368 3a963c9248a911a0e85e0900ae975870 "pdflatex"
   "tg.bbl" 1755172863.4352 10687 3cf5d28b0972801d52930f0e1f7de227 "bibtex tg"
-  "tg.lof" 1755174168.84928 5238 8dc3656da240db2c37a2843bae8cc720 "pdflatex"
-  "tg.lot" 1755174168.84933 1243 adab065c38eb5a4f248cee0e00057425 "pdflatex"
-  "tg.out" 1755174168.84906 9796 dee4a068fa0abe0b22203ad737963c92 "pdflatex"
-  "tg.tex" 1755173726.03004 83704 9b5409568ac8d19b04f79f4db510eea4 ""
-  "tg.toc" 1755174168.84938 4044 5a29278a0697dbeb9ec4760cf18feab9 "pdflatex"
+  "tg.lof" 1755177278.69952 5238 8dc3656da240db2c37a2843bae8cc720 "pdflatex"
+  "tg.lot" 1755177278.69958 1243 adab065c38eb5a4f248cee0e00057425 "pdflatex"
+  "tg.out" 1755177278.6993 9796 dee4a068fa0abe0b22203ad737963c92 "pdflatex"
+  "tg.tex" 1755177270.30203 83712 2717c50198622c46f160a7872e87d73a ""
+  "tg.toc" 1755177278.69961 4044 5a29278a0697dbeb9ec4760cf18feab9 "pdflatex"
   "ufabcFHZh_tg.cls" 1755172863.42234 53444 dbdd86f0470b0de181edd708c14c6274 ""
   (generated)
   "Pre-Textuais/list_of_acronyms.aux"
