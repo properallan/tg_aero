@@ -1,0 +1,101 @@
+\begin{thebibliography}{15}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Arina(2004)}]{ARINA2004409}
+Arina, R., 2004.
+\newblock \enquote{Numerical simulation of near-critical fluids}.
+\newblock \emph{Applied Numerical Mathematics}, Vol.~51, No.~4, pp. 409--426.
+\newblock ISSN 0168-9274.
+\newblock \doi{https://doi.org/10.1016/j.apnum.2004.06.002}.
+\newblock Applied Scientific Computing: Advances in Grid Generatuion, Approximation and Numerical Modeling.
+
+\bibitem[{Babu(2021)}]{Babu2020}
+Babu, V., 2021.
+\newblock \emph{Fundamentals of Gas Dynamics}.
+\newblock Springer International Publishing.
+\newblock \doi{10.1007/978-3-030-60819-4}.
+\newblock \urlprefix\url{https://doi.org/10.1007/978-3-030-60819-4}.
+
+\bibitem[{Back \emph{et~al.}(1964)Back, Massier and Gier}]{Back1964ConvectiveHT}
+Back, L.H., Massier, P.F. and Gier, H.L., 1964.
+\newblock \enquote{Convective heat transfer in a convergent-divergent nozzle}.
+\newblock \emph{International Journal of Heat and Mass Transfer}, Vol.~7, pp. 549--568.
+
+\bibitem[{Brunton and Kutz(2019)}]{Brunton2019}
+Brunton, S.L. and Kutz, J.N., 2019.
+\newblock \emph{Data-driven science and engineering}.
+\newblock Cambridge University Press (Virtual Publishing), Cambridge, England.
+
+\bibitem[{Dubois \emph{et~al.}(2022)Dubois, Gomez, Planckaert and Perret}]{Dubois2022}
+Dubois, P., Gomez, T., Planckaert, L. and Perret, L., 2022.
+\newblock \enquote{Machine learning for fluid flow reconstruction from limited measurements}.
+\newblock \emph{Journal of Computational Physics}, Vol. 448, p. 110733.
+\newblock \doi{10.1016/j.jcp.2021.110733}.
+
+\bibitem[{Economon \emph{et~al.}(2016)Economon, Palacios, Copeland, Lukaczyk and Alonso}]{Economon2016}
+Economon, T.D., Palacios, F., Copeland, S.R., Lukaczyk, T.W. and Alonso, J.J., 2016.
+\newblock \enquote{{SU}2: An open-source suite for multiphysics simulation and design}.
+\newblock \emph{{AIAA} Journal}, Vol.~54, No.~3, pp. 828--846.
+\newblock \doi{10.2514/1.j053813}.
+
+\bibitem[{Erichson \emph{et~al.}(2020)Erichson, Mathelin, Yao, Brunton, Mahoney and Kutz}]{Erichson2020}
+Erichson, N.B., Mathelin, L., Yao, Z., Brunton, S.L., Mahoney, M.W. and Kutz, J.N., 2020.
+\newblock \enquote{Shallow neural networks for fluid flow reconstruction with limited sensors}.
+\newblock \emph{Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences}, Vol. 476, No. 2238, p. 20200097.
+\newblock \doi{10.1098/rspa.2020.0097}.
+
+\bibitem[{Forrester \emph{et~al.}(2008)Forrester, S{\'{o}}bester and Keane}]{Forrester2008}
+Forrester, A.I.J., S{\'{o}}bester, A. and Keane, A.J., 2008.
+\newblock \emph{Engineering Design via Surrogate Modelling}.
+\newblock Wiley.
+\newblock \doi{10.1002/9780470770801}.
+
+\bibitem[{Hesthaven \emph{et~al.}(2016)Hesthaven, Rozza and Stamm}]{Hesthaven2016}
+Hesthaven, J.S., Rozza, G. and Stamm, B., 2016.
+\newblock \emph{Certified Reduced Basis Methods for Parametrized Partial Differential Equations}.
+\newblock Springer International Publishing.
+\newblock \doi{10.1007/978-3-319-22470-1}.
+
+\bibitem[{Hornik \emph{et~al.}(1989)Hornik, Stinchcombe and White}]{Hornik1989}
+Hornik, K., Stinchcombe, M. and White, H., 1989.
+\newblock \enquote{Multilayer feedforward networks are universal approximators}.
+\newblock \emph{Neural Networks}, Vol.~2, No.~5, pp. 359--366.
+\newblock \doi{10.1016/0893-6080(89)90020-8}.
+
+\bibitem[{Ma \emph{et~al.}(2022)Ma, Kashanj, Xu, Zhou, Nobes and Ye}]{Ma2022}
+Ma, L., Kashanj, S., Xu, S., Zhou, J., Nobes, D.S. and Ye, M., 2022.
+\newblock \enquote{Flow reconstruction and prediction based on small particle image velocimetry experimental datasets with convolutional neural networks}.
+\newblock \emph{Industrial \& Engineering Chemistry Research}, Vol.~61, No.~24, pp. 8504--8519.
+\newblock \doi{10.1021/acs.iecr.1c04704}.
+\newblock \urlprefix\url{https://doi.org/10.1021/acs.iecr.1c04704}.
+
+\bibitem[{Ng and Hughes(2018)}]{Ng2018}
+Ng, F.S.L. and Hughes, A.L.C., 2018.
+\newblock \enquote{Reconstructing ice-flow fields from streamlined subglacial bedforms: A kriging approach}.
+\newblock \emph{Earth Surface Processes and Landforms}, Vol.~44, No.~4, pp. 861--876.
+\newblock \doi{10.1002/esp.4538}.
+
+\bibitem[{Roache(1994)}]{roache1994}
+Roache, P.J., 1994.
+\newblock \enquote{{Perspective: A Method for Uniform Reporting of Grid Refinement Studies}}.
+\newblock \emph{Journal of Fluids Engineering}, Vol. 116, No.~3, pp. 405--413.
+\newblock ISSN 0098-2202.
+\newblock \doi{10.1115/1.2910291}.
+
+\bibitem[{Yu and Hesthaven(2019)}]{Yu2019}
+Yu, J. and Hesthaven, J.S., 2019.
+\newblock \enquote{Flowfield reconstruction method using artificial neural network}.
+\newblock \emph{{AIAA} Journal}, Vol.~57, No.~2, pp. 482--498.
+\newblock \doi{10.2514/1.j057108}.
+
+\bibitem[{Özbay and Laizet(2022)}]{Ozbay22}
+Özbay, A.G. and Laizet, S., 2022.
+\newblock \enquote{Deep learning fluid flow reconstruction around arbitrary two-dimensional objects from sparse sensors using conformal mappings}.
+
+\end{thebibliography}

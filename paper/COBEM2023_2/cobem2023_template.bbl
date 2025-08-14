@@ -1,0 +1,117 @@
+\begin{thebibliography}{13}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Binder \emph{et~al.}(2016)Binder, Klein, Binder, Hammes, Parucker and
+  {Ristow Junior}}]{Binder2016}
+Binder, R., Klein, A.N., Binder, C., Hammes, G., Parucker, M.L. and {Ristow
+  Junior}, W., 2016.
+\newblock \enquote{Metallurgical composition of particulate materials,
+  self-lubricating sintered products and process for obtaining self-lubricating
+  sintered products}.
+\newblock Patent, United States Patent and Trademark Office, Registry number:
+  US-9243313-B2, Application date: September 09, 2009, Publication date:
+  December 06, 2016.
+
+\bibitem[{Caraguay \emph{et~al.}(2022)Caraguay, Pereira, Cunha, Pereira and
+  Xavier}]{Caraguay2022}
+Caraguay, S.J., Pereira, T.S., Cunha, R.O.G.A., Pereira, M. and Xavier, F.A.,
+  2022.
+\newblock \enquote{The effect of laser surface textures on the corrosion
+  resistance of epoxy coated steel exposed to aggressive environments for
+  offshore applications}.
+\newblock \emph{Surface and Coatings Technology}, Vol. 437, p. 128371.
+
+\bibitem[{Carvalho \emph{et~al.}(2018)Carvalho, Martins, Simoni and
+  Simas}]{Carvalho2018}
+Carvalho, J.C.M., Martins, D., Simoni, R. and Simas, H., 2018.
+\newblock \emph{Multibody Mechatronic Systems - Proceedings of the MUSME
+  Conference held in Florian\'opolis, Brazil, October 24-28, 2017}.
+\newblock Mechanisms and Machine Science. Springer International Publishing.
+
+\bibitem[{EPE(2022)}]{EPE2022}
+EPE, 2022.
+\newblock \enquote{National energy balance 2022, final report (in portuguese)}.
+\newblock Empresa de Pesquisa Energética EPE, Rio de Janeiro,
+  epe.gov.br/sites-pt/publicacoes-dados-abertos/publicacoes/PublicacoesArquivos/publicacao-675/topico-638/BEN2022.pdf.
+  Accessed 02 May 2023.
+
+\bibitem[{Fernandes \emph{et~al.}(2018)Fernandes, Teixeira, Boeing, {Pedro
+  Filho}, Berramashi, Tounier, Silva and {Caminha Junior}}]{Fernandes2018}
+Fernandes, R.B., Teixeira, J.S.V., Boeing, F., {Pedro Filho}, A., Berramashi,
+  E.A., Tounier, M.B., Silva, M.B. and {Caminha Junior}, L., 2018.
+\newblock \enquote{System for monitoring controlled areas in work environments
+  (in portuguese)}.
+\newblock Patent, INPI - Instituto Nacional da Propriedade Industrial, Brazil,
+  Utility Model, Registry number: BR10201806780403, Deposit: September 04,
+  2018.
+
+\bibitem[{Mendon\c{c}a and Fancello(2019)}]{MendoncaFancello2019}
+Mendon\c{c}a, P.T.R. and Fancello, E.A., 2019.
+\newblock \emph{The method of finite elements applied to mechanics of solids
+  (in Portuguese)}.
+\newblock Editora Orsa Maggiore, Florian\'opolis.
+
+\bibitem[{MLA(2020)}]{MLA20}
+MLA, 2020.
+\newblock \enquote{\uppercase{MLA} works cited: Electronic sources (web
+  publications)}.
+\newblock Modern Language Association, Purdue Online Writing Laboratory, Purdue
+  University, owl.purdue.edu/owl/research\_and\_citation/mla\_
+  style/mla\_formatting\_and\_style\_guide/mla\_works\_cited\_electronic\_sources.html.
+  Accessed 02 May 2023.
+
+\bibitem[{Nostrani \emph{et~al.}(2019)Nostrani, Kruss, {De Negri} and
+  {Dell'Amico}}]{Nostrani2019}
+Nostrani, M.P., Kruss, P., {De Negri}, V.J. and {Dell'Amico}, A., 2019.
+\newblock \enquote{An aircraft actuator driven by digital hydraulic pumps}.
+\newblock In \emph{Proceedings of the XVIII International Symposium on Dynamic
+  Problems of Mechanics - DINAME 2019}. ABCM - Brazilian Society of Mechanical
+  Sciences and Engineering, Armação de Búzios, RJ, Brazil.
+
+\bibitem[{Santos \emph{et~al.}(2013{\natexlab{a}})Santos, Furtado, Frey,
+  Naccache and {de Souza Mendes}}]{Santos2013a}
+Santos, D.D., Furtado, G.M., Frey, S.L., Naccache, M.F. and {de Souza Mendes},
+  P.R., 2013{\natexlab{a}}.
+\newblock \enquote{Flow of elasto-viscoplastic fluids inside a cavity}.
+\newblock In \emph{Proceedings of the 22nd International Congress of Mechanical
+  Engineering - COBEM 2013}. Ribeir\~ao Preto, Brazil.
+
+\bibitem[{Santos \emph{et~al.}(2013{\natexlab{b}})Santos, Furtado, Frey,
+  Naccache and {de Souza Mendes}}]{Santos2013b}
+Santos, D.D., Furtado, G.M., Frey, S.L., Naccache, M.F. and {de Souza Mendes},
+  P.R., 2013{\natexlab{b}}.
+\newblock \enquote{Numerical investigation of elastic and viscous effects on
+  inertial viscoplastic fluid flows}.
+\newblock In \emph{Proceedings of the 22nd International Congress of Mechanical
+  Engineering - COBEM 2013}. Ribeir\~ao Preto, Brazil.
+
+\bibitem[{Santos(2020)}]{Santos2020}
+Santos, V.O., 2020.
+\newblock \emph{Experimental and numerical analysis of the fretting corrosion
+  mechanism at the stem-head and stem-cement contact surfaces of hip prostheses
+  (in Portuguese)}.
+\newblock Master's thesis, Graduate Program in Mechanical Engineering, Federal
+  University of Santa Catarina, Florian\'opolis, Brasil.
+
+\bibitem[{Simas and {Di Gregorio}(2019)}]{Simas2019}
+Simas, H. and {Di Gregorio}, R., 2019.
+\newblock \enquote{A technique based on adaptive extended jacobians for
+  improving the robustness of the inverse numerical kinematics of redundant
+  robots}.
+\newblock \emph{Journal of Mechanisms and Robotics}, Vol.~11, p. 020913.
+
+\bibitem[{Spillere(2022)}]{Spillere2022}
+Spillere, A.M.N., 2022.
+\newblock \emph{Boundary layer effects on acoustic liners for turbofan engines:
+  from experimental methods to optimization techniques}.
+\newblock Ph.D. thesis, Graduate Program in Mechanical Engineering, Federal
+  University of Santa Catarina, Florian\'opolis, Brasil.
+
+\end{thebibliography}
