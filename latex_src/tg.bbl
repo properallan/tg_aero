@@ -22,9 +22,13 @@
 
 \bibitem[Economon \MakeLowercase{et~al.}(2016)Economon; Palacios; Copeland; Lukaczyk; Alonso]{economon2016} ECONOMON, T.; PALACIOS, F.; COPELAND, S.; LUKACZYK, T.; ALONSO, J\@. {SU2}: An open-source suite for multiphysics simulation and design. \textbf{AIAA Journal}, [S.l.], v.54, n.3, p.828--846, 2016.
 
+\bibitem[Engblom \MakeLowercase{et~al.}(2007)Engblom; Fletcher; Georgiadis]{Engblom2007} ENGBLOM, W.; FLETCHER, B.; GEORGIADIS, N\@. Validation of conjugate heat-transfer capability for water-cooled high-speed flows. In: AIAA THERMOPHYSICS CONFERENCE, 39., 2007. \textbf{Anais{\ldots}} [S.l.:~s.n.], 2007. p.4392.
+
 \bibitem[Erichson \MakeLowercase{et~al.}(2020)Erichson; Mathelin; Yao; Brunton; Mahoney; Kutz]{erichson2020} ERICHSON, N.; MATHELIN, L.; YAO, Z.; BRUNTON, S.; MAHONEY, M.; KUTZ, J\@. Shallow neural networks for fluid flow reconstruction with limited sensors. \textbf{Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences}, [S.l.], v.476, n.2238, p.20200097, 2020.
 
 \bibitem[Forrester \MakeLowercase{et~al.}(2008)Forrester; S{\'o}bester; Keane]{forrester2008} FORRESTER, A.; S{\'O}BESTER, A.; KEANE, A\@. \textbf{Engineering Design via Surrogate Modelling}. [S.l.]: Wiley, 2008.
+
+\bibitem[Geuzaine; Remacle(2009)Geuzaine; Remacle]{geuzaine2009gmsh} GEUZAINE, C.; REMACLE, J.-F\@. Gmsh: A 3-D finite element mesh generator with built-in pre-and post-processing facilities. \textbf{International journal for numerical methods in engineering}, [S.l.], v.79, n.11, p.1309--1331, 2009.
 
 \bibitem[Glaessgen; Stargel(2012)Glaessgen; Stargel]{glaessgen2012digital} GLAESSGEN, E.; STARGEL, D\@. The digital twin paradigm for future NASA and US Air Force vehicles. In: AIAA/ASME/ASCE/AHS/ASC STRUCTURES, STRUCTURAL DYNAMICS AND MATERIALS CONFERENCE 20TH AIAA/ASME/AHS ADAPTIVE STRUCTURES CONFERENCE 14TH AIAA, 53., 2012. \textbf{Anais{\ldots}} [S.l.:~s.n.], 2012. p.1818.
 
@@ -73,8 +77,6 @@
 \bibitem[Taira \MakeLowercase{et~al.}(2017)Taira; Brunton; Dawson; Rowley; Colonius; Mckeon \MakeLowercase{et~al.}]{taira2017} TAIRA, K.; BRUNTON, S.~L.; DAWSON, S. T.~M.; ROWLEY, C.~W.; COLONIUS, T.; MCKEON, B.~J. \MakeLowercase{et~al.} Modal analysis of fluid flows: An overview. \textbf{AIAA Journal}, [S.l.], v.55, n.12, p.4013--4041, 2017.
 
 \bibitem[Toffol; Ricci(2018)Toffol; Ricci]{toffol2018} TOFFOL, F.; RICCI, S\@. A methodology for the structural optimization of a transport aircraft wing box including aeroelastic constraints. \textbf{Aerospace Science and Technology}, [S.l.], v.78, p.473--487, 2018.
-
-\bibitem[VALIDATION OF CONJUGATE HEAT-TRANSFER CAPABILITY FOR WATER-COOLED HIGH-SPEED FLOWS(????)VALIDATION OF CONJUGATE HEAT-TRANSFER CAPABILITY FOR WATER-COOLED HIGH-SPEED FLOWS]{Engblom2007} ENGBLOM, W.; FLETCHER, B.; GEORGIADIS, N\@. \textbf{Validation of Conjugate Heat-Transfer Capability for Water-Cooled High-Speed Flows}. [S.l.:~s.n.].
 
 \bibitem[Versteeg; Malalasekera(2007)Versteeg; Malalasekera]{versteeg2007} VERSTEEG, H.; MALALASEKERA, W\@. \textbf{An Introduction to Computational Fluid Dynamics}: The Finite Volume Method. [S.l.]: Pearson Education Limited, 2007.
 

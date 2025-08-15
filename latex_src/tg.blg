@@ -5,44 +5,44 @@ A level-1 auxiliary file: Pre-Textuais/list_of_acronyms.aux
 A level-1 auxiliary file: Pre-Textuais/list_of_symbols.aux
 The style file: Bibliografia/abnt2023.bst
 Database file #1: Bibliografia/library.bib
-You've used 43 entries,
+You've used 44 entries,
             2376 wiz_defined-function locations,
-            832 strings with 11303 characters,
-and the built_in function-call counts, 39381 in all, are:
-= -- 3754
-> -- 330
-< -- 763
-+ -- 2393
-- -- 181
-* -- 2536
-:= -- 3333
-add.period$ -- 164
-call.type$ -- 43
-change.case$ -- 532
-chr.to.int$ -- 74
-cite$ -- 43
-duplicate$ -- 4933
-empty$ -- 2174
-format.name$ -- 725
+            840 strings with 11515 characters,
+and the built_in function-call counts, 39597 in all, are:
+= -- 3707
+> -- 346
+< -- 788
++ -- 2371
+- -- 195
+* -- 2621
+:= -- 3353
+add.period$ -- 168
+call.type$ -- 44
+change.case$ -- 541
+chr.to.int$ -- 94
+cite$ -- 44
+duplicate$ -- 4894
+empty$ -- 2225
+format.name$ -- 739
 if$ -- 7911
 int.to.chr$ -- 0
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 89
-num.names$ -- 215
-pop$ -- 938
+newline$ -- 91
+num.names$ -- 220
+pop$ -- 964
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 44
 quote$ -- 0
-skip$ -- 2295
+skip$ -- 2301
 stack$ -- 0
-substring$ -- 1815
-swap$ -- 3472
+substring$ -- 1816
+swap$ -- 3483
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 314
+type$ -- 316
 warning$ -- 0
-while$ -- 265
+while$ -- 274
 width$ -- 0
-write$ -- 45
+write$ -- 46

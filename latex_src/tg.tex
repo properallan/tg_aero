@@ -80,7 +80,7 @@
 \end{epigrafe}
 
 \begin{foreignabstract}
-The aerothermodynamic design of high-performance propulsion systems, such as rocket nozzles, presents a critical computational challenge. High-fidelity (HF) simulations, typically based on Reynolds-Averaged Navier-Stokes (RANS) equations coupled with conjugate heat transfer (CHT) models, provide the accurate wall heat flux predictions but are prohibitively expensive for multi-query applications, like design optimization and uncertainty quantification (UQ). On the other hand, low-fidelity (LF) models, such as quasi-one-dimensional Euler solvers, are computationally cheap but are unable to predict critical viscous and thermal phenomena. This dissertation addresses this dilemma by developing and validating a data-driven, multi-fidelity framework for the fast and accurate reconstruction of two-dimensional compressible and viscous flow fields in a water-cooled, convergent-divergent nozzle. The methodology uses a small database of paired LF and high fidelity HF simulations to train a computationally inexpensive surrogate model. Proper Orthogonal Decomposition (POD) is employed for dimensionality reduction, demonstrating exceptional efficiency by compressing the high-dimensional flow state into a latent space of just 3 principal components with negligible information loss. The central contribution of this work is the comparison of two surrogate modeling techniques for mapping the LF latent space to the HF latent space: the Artificial Neural Network (ANN) and a the Kriging interpolator. The results demonstrate the framework's success, with the Kriging-based Reduced Order Model (ROM) achieving a computational speedup of over 38,000 times compared to the HF simulation while maintaining remarkable accuracy, evidenced by a normalized root mean squared error of just 0.01\% for the temperature field and 0.04\% for the wall heat flux. A key finding is the superior performance of the Kriging model over the ANN, in this specific scenario, highlighting that for engineering problems characterized by smooth, low-dimensional mappings and limited data, traditional statistical methods can offer greate accuracy and efficiency, even beating recent machine learning architectures. This work provides a robust framework that breaks the trade-off between computational cost and accuracy, enabling previously intractable multi-query analyses essential for aerospace engineering.
+The aerothermodynamic design of high-performance propulsion systems, such as rocket nozzles, presents a critical computational challenge. High-fidelity (HF) simulations, typically based on Reynolds-Averaged Navier-Stokes (RANS) equations coupled with conjugate heat transfer (CHT) models, provide the accurate wall heat flux predictions but are prohibitively expensive for multi-query applications, like design optimization and uncertainty quantification (UQ). On the other hand, low-fidelity (LF) models, such as quasi-one-dimensional Euler solvers, are computationally cheap but are unable to predict critical viscous and thermal phenomena. This dissertation addresses this dilemma by developing and validating a data-driven, multi-fidelity framework for the fast and accurate reconstruction of two-dimensional compressible and viscous flow fields in a water-cooled, convergent-divergent nozzle. The methodology uses a small database of paired LF and high fidelity HF simulations to train a computationally inexpensive surrogate model. Proper Orthogonal Decomposition (POD) is employed for dimensionality reduction, demonstrating exceptional efficiency by compressing the high-dimensional flow state into a latent space of just 3 principal components with negligible information loss. The central contribution of this work is the comparison of two surrogate modeling techniques for mapping the LF latent space to the HF latent space: the Artificial Neural Network (ANN) and a the Kriging interpolator. The results demonstrate the framework's success, with the Kriging-based Reduced Order Model (ROM) achieving a computational speedup of over 38,000 times compared to the HF simulation while maintaining remarkable accuracy, evidenced by a normalized root mean squared error of just $1.89\times10^{-6}$ \% for the temperature field and $3.07\times10^{-4}$ \% for the wall heat flux. A key finding is the superior performance of the Kriging model over the ANN, in this specific scenario, highlighting that for engineering problems characterized by smooth, low-dimensional mappings and limited data, traditional statistical methods can offer greate accuracy and efficiency, even beating recent machine learning architectures. This work provides a robust framework that breaks the trade-off between computational cost and accuracy, enabling previously intractable multi-query analyses essential for aerospace engineering.
 \end{foreignabstract}
 \keywordeng
 {Reduced Order Model};
@@ -89,7 +89,7 @@ The aerothermodynamic design of high-performance propulsion systems, such as roc
 {Fluid Flow Reconstruction}
 
 \begin{abstract}
-O projeto aerotermodinâmico de sistemas de propulsão, como bocais de foguete, apresenta um desafio computacional crítico. Simulações de alta fidelidade (HF), tipicamente baseadas nas equações de Reynolds-Averaged Navier-Stokes (RANS) acopladas a modelos de transferência de calor conjugado (CHT), fornecem previsões precisas do fluxo de calor na parede, mas são proibitivamente caras para aplicações envolvendo múltiplas consultas, como otimização e quantificação de incerteza (UQ). Por outro lado, modelos de baixa fidelidade (LF), como as equaçoes de Euler quase unidimensionais, são computacionalmente baratos, mas incapazes de prever fenômenos viscosos e térmicos. Esta dissertação aborda esse dilema ao desenvolver e validar uma estrutura (framework) multi-fidelidade orientada a dados para a reconstrução rápida e precisa de campos de escoamento bidimensionais, compressíveis e viscosos em um bocal convergente-divergente refrigerado a água. A metodologia utiliza um pequeno banco de dados pareado de simulações de baixa (LF) e alta fidelidade (HF) para treinar um modelo substituto (surrogate) de baixo custo computacional. A Decomposição Ortogonal Própria (POD) é empregada para a redução de dimensionalidade, demonstrando eficiência excepcional ao comprimir o estado de escoamento de alta dimensão em um espaço latente de apenas 3 componentes principais com perda de informação desprezível. A contribuição central deste trabalho é a comparação de duas técnicas de modelagem substituta para mapear o espaço latente de baixa fidelidade (LF) para o espaço latente de alta fidelidade (HF): a Rede Neural Artificial (ANN) e o interpolador Kriging. Os resultados demonstram o sucesso da estrutura, com o Modelo de Ordem Reduzida (ROM) baseado em Kriging alcançando uma aceleração computacional de mais de 38.000 vezes em comparação com a simulação de alta fidelidade, mantendo uma precisão notável, evidenciada por um erro médio quadrático normalizado (NRMSE) de apenas 0,01 \% para o campo de temperatura e 0,04 \% para o fluxo de calor na parede. Um achado fundamental é o desempenho superior do modelo de Kriging em relação à RNA, nesse cenário específico, destacando que para problemas de engenharia caracterizados por mapeamentos suaves, de baixa dimensão e com dados limitados, métodos estatísticos tradicionais podem oferecer grade precisão e eficiência, até mesmo superando recentes arquiteturas de aprendizado de máquina. Este trabalho fornece uma estrutura robusta que quebra o compromisso entre custo computacional e precisão, permitindo análises de múltiplas consultas antes intratáveis, essenciais para a engenharia aeroespacial.
+O projeto aerotermodinâmico de sistemas de propulsão, como bocais de foguete, apresenta um desafio computacional crítico. Simulações de alta fidelidade (\textit{high-fidelity} - HF), baseadas nas equações de \textit{Reynolds-Averaged Navier-Stokes} (RANS) acopladas a modelos de transferência de calor conjugado (\textit{Conjugate Heat Transfer} - CHT), fornecem previsões precisas do fluxo de calor na parede, mas são proibitivamente caras para aplicações envolvendo múltiplas consultas, como otimização e quantificação de incerteza (\textit{uncertainty quantification} - UQ). Por outro lado, modelos de baixa fidelidade (\textit{low-fidelity} - LF), como as equaçoes de Euler quase unidimensionais, são computacionalmente baratos, mas incapazes de prever fenômenos viscosos e térmicos. Esta dissertação aborda esse dilema ao desenvolver e validar uma estrutura (\textit{framework}) multi-fidelidade orientada a dados para a reconstrução rápida e precisa de campos de escoamento bidimensionais, compressíveis e viscosos em um bocal convergente-divergente refrigerado a água. A metodologia utiliza um pequeno banco de dados pareado de simulações LF e HF para treinar um modelo substituto (surrogate) de baixo custo computacional. A Decomposição Ortogonal Própria (\textit{Proper Orthogonal Decomposition} - POD) é empregada para a redução de dimensionalidade, demonstrando eficiência excepcional ao comprimir os dados de alta dimensão em um espaço latente de apenas 3 componentes principais com perda de informação desprezível. A contribuição central deste trabalho é a comparação de duas técnicas de modelagem: a Rede Neural Artificial (\textit{Artificial Neural Network} - ANN) e o interpolador Kriging. Os resultados demonstram o sucesso da estrutura, com o Modelo de Ordem Reduzida (\textit{Reduced Order Model} - ROM) baseado em Kriging alcançando uma aceleração computacional de mais de 38.000 vezes em comparação com a simulação de alta fidelidade, mantendo uma precisão notável, evidenciada por um erro médio quadrático normalizado (\textit{normalized root mean squared error} - NRMSE) de apenas $1.89\times10^{-6}$ \% para o campo de Temperatura e $3.07\times10^{-4}$ \% para o fluxo de calor na parede. Um achado fundamental é o desempenho do modelo de Kriging em relação à ANN, nesse cenário específico, destacando que para problemas de engenharia caracterizados por mapeamentos suaves, de baixa dimensão e com dados limitados, métodos estatísticos tradicionais podem oferecer grande precisão e eficiência, até mesmo superando recentes arquiteturas de aprendizado de máquina. Este trabalho fornece uma estrutura robusta que quebra o compromisso entre custo computacional e precisão, permitindo análises de múltiplas consultas antes intratáveis, essenciais para a engenharia aeroespacial.
 \end{abstract}
 \palavrachave{Modelo de Ordem Reduzida};
 {Baseado em Dados};
@@ -146,17 +146,15 @@ O projeto aerotermodinâmico de sistemas de propulsão, como bocais de foguete, 
 \chapter{Introduction}
 \label{chap:introduction}
 
-\section{The Convergent-Divergent Nozzle}
-
 \section{Physics of Convergent-Divergent Nozzle Flow}
 
 
-The convergent-divergent nozzle, often referred to as the De Laval nozzle, represents a fundamental technology in the field of high-speed aerospace propulsion \citep{sutton2010, anderson2003}. Its primary function is to accelerate a hot, high-pressur gas to supersonic velocities,generating thrust as a result. This is achieved by converting the thermal and pressure energy of the working fluid, typically the products of combustion, into kinetic energy \citep{sutton2010}. The nozzle's characteristic shape is composed of a converging section, a minimum-area throat, and a diverging section, which is specifically designed to deal with the compressible transonic flow, as illustrated in Figure \ref{fig:nozzle_representation}. 
+The convergent-divergent nozzle, often referred to as the De Laval nozzle, represents a fundamental technology in the field of high-speed aerospace propulsion \citep{sutton2010, anderson2003}. Its primary function is to accelerate a hot, high-pressure gas to supersonic velocities, generating thrust as a result. This is achieved by converting the thermal and pressure energy of the working fluid, typically the products of combustion, into kinetic energy \citep{sutton2010}. The nozzle's characteristic shape is composed of a converging section, a minimum-area throat, and a diverging section, which is specifically designed to deal with the compressible transonic flow, as illustrated in Figure \ref{fig:nozzle_representation}. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Figuras/cd_nozzle.pdf} 
-    \caption{Schematic representation of a convergent-divergent (De Laval) nozzle. The top panel shows the physical contour, identifying the subsonic converging section, the throat where the flow becomes sonic ($M=1$), and the supersonic diverging section.}
+    \caption{Schematic representation of a convergent-divergent (De Laval) nozzle. The top panel shows the physical contour, identifying the subsonic converging section, the throat where the flow becomes sonic ($M=1$), and the supersonic diverging section. Source: The author.}
     \label{fig:nozzle_representation}
 \end{figure}
 
@@ -166,28 +164,32 @@ The operation of a De Laval nozzle is governed by the principles of isentropic c
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Figuras/cd_nozzle_qualitative.pdf} 
-    \caption{Illustration of the qualitative behavior of key flow properties along the nozzle axis: pressure ($p$) and temperature ($T$) decrease, while Mach number ($M$) increase.}
+    \caption{Illustration of the qualitative behavior of key flow properties along the nozzle axis: pressure ($p$) and temperature ($T$) decrease, while Mach number ($M$) increase. $p_e$, $T_e$ and $M_e$ correspond to the static pressure, static temperature and Mach number at the nozzle exit section, while $p_0$ and $p_0$ represent the stagnation conditions for pressure and temperature at nozzle inlet section. Source: Adapted from \cite{anderson2003}.}
     \label{fig:nozzle_qualitative}
 \end{figure}
 
+
+
 \section{Aerothermodynamic Design}
 
-The operational condition within a convergent-divergent nozzle can become exceptionally severe, characterized by extreme temperatures and pressures that result in extreme thermomechanical stresses on the nozzle's wall structure \citep{sutton2010, back1964}. Consequently, a challenge in nozzle design is the management of heat transfer from the hot gas to the nozzle walls. This aerothermodynamic problem is critical to assure the structural integrity and operational reliability of the entire propulsion system . Uncontrolled wall temperatures can lead to material degradation, thermal fatigue, and catastrophic failure \citep{back1964}.
+The operational condition within a convergent-divergent nozzle can become exceptionally severe, characterized by extreme temperatures and pressures that result in extreme thermomechanical stresses on the nozzle's wall structure \citep{sutton2010, back1964}. Consequently, a challenge in nozzle design is the management of heat transfer from the hot gas to the nozzle walls. This aerothermodynamic problem is critical to assure the structural integrity and operational reliability of the entire propulsion system. Uncontrolled wall temperatures can lead to material degradation, thermal fatigue, and catastrophic failure \citep{back1964}.
 
 To mitigate these risks, modern high-performance nozzles often incorporate active cooling systems, such as circulating water through channels within the nozzle walls. This makes the design problem into one of conjugate heat transfer (CHT), where the heat transfer within the fluid (convection) is intricately coupled with the heat transfer within the solid structure (conduction), as depicted in Figure \ref{fig:cht_problem}. Accurately predicting the temperature distribution and heat flux at the fluid-solid interface is then not merely an academic exercise but a critical design requirement.
-
-To simplify the complexity of coupled conjugate heat transfer problems, a common approach is to assume steady-state operation. This is a reasonable approximation for many practical applications where transient effects are negligible over the timescale of interest. Under this assumption, the fluid flow can be modeled using the steady-state Reynolds-Averaged Navier–Stokes (RANS) equations, along with appropriate turbulence models to account for the effects of turbulence on heat transfer. The heat transfer in the solid domain is typically modeled by the heat conduction equation, with boundary conditions defined by convective heat transfer from the fluid and any external cooling mechanisms. To further reduce computational cost, the coolant flow is not explicitly modeled. Instead, an average prescribed temperature can be imposed on the cooling surface of the outer nozzle wall, this simplifications are often acceptable for cases with high coolant flow rates \citep{Engblom2007}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Figuras/cd_nozzle_cht.pdf}
-    \caption{Conceptual diagram of the conjugate heat transfer (CHT) problem in a cooled nozzle wall. The figure shows the coupled physics: convective heat transfer ($q$) from the hot gas flow to the inner wall surface.}
+    \caption{Conceptual diagram of the conjugate heat transfer (CHT) problem in a cooled nozzle wall. The figure shows the coupled physics: convective heat transfer ($q$) from the hot gas flow to the inner wall surface. Source: The author.}
     \label{fig:cht_problem}
 \end{figure}
 
+To simplify the complexity of coupled conjugate heat transfer problems, a common approach is to assume steady-state operation. This is a reasonable approximation for many practical applications where transient effects are negligible over the timescale of interest. Under this assumption, the fluid flow can be modeled using the steady-state Reynolds-Averaged Navier–Stokes (RANS) equations, along with appropriate turbulence models to account for the effects of turbulence on heat transfer. The heat transfer in the solid domain is typically modeled by the heat conduction equation, with boundary conditions defined by convective heat transfer from the fluid and any external cooling mechanisms. To further reduce computational cost, the coolant flow is not explicitly modeled. Instead, an average prescribed temperature can be imposed on the cooling surface of the outer nozzle wall, this simplifications are often acceptable for cases with high coolant flow rates \citep{Engblom2007}.
+
+
+
 \section{The Computational Bootleneck: Accuracy vs. Cost}
 
-The modeling of such complex CHT phenomena necessitates the use of high-fidelity (HF) computational fluid dynamics (CFD) simulations, which typically solve the Reynolds-Averaged Navier-Stokes (RANS) equations. These simulations are capable of capturing the essential physics of turbulence, viscosity, and heat transfer that govern the system's behavior \citep{wilcox1998}. However, the computational cost associated with these HF simulations can be huge, making them impractical for the mutli-query scenarios often faced in iterative engineering design cycles \citep{hesthaven2016, benner2015, quarteroni2016,hesthaven2016}.
+The modeling of such complex CHT phenomena necessitates the use of high-fidelity (HF) computational fluid dynamics (CFD) simulations, which typically solve the Reynolds-Averaged Navier-Stokes (RANS) equations. These simulations are capable of capturing the essential physics of turbulence, viscosity, and heat transfer that govern the system's behavior \citep{wilcox1998}. However, the computational cost associated with these HF simulations can be huge, making them impractical for the mutli-query scenarios often faced in iterative engineering design cycles \citep{hesthaven2016, benner2015, quarteroni2016}.
 
 In contrast, low-fidelity (LF) models, such as simplified quasi-one-dimensional (quasi-1D) Euler solvers, are orders of magnitude faster. While these models can capture the essential flow dynamics, like compressibility, their simplification assumptions, prevent them from predicting viscous effects such as boundary layer development and wall heat transfer \citep{moreira2023}. This creates a significant computational dilemma: the models that are fast enough are not accurate enough for the problem at hand, and the models that are accurate enough are far too slow for practical design cycles.
 
@@ -210,13 +212,13 @@ This work addresses the aforementioned computational dilemma by proposing a data
         \subcaption{Online prediction stage: fast LF simulation, projection, surrogate prediction, and HF field reconstruction.}
         \label{fig:rom_methodology_b}
     \end{minipage}
-    \caption{The data-driven ML-ROM methodology is divided into two stages. (a) The offline training stage is computationally expensive but performed only once. It involves generating paired high-fidelity (HF) and low-fidelity (LF) simulation snapshots, using Proper Orthogonal Decomposition (POD) to find low-dimensional bases, and training a surrogate model to map the LF coefficients to the HF coefficients. (b) The online prediction stage is computationally cheap and performed during inference on unseen parameters. It involves running a new fast LF simulation, projecting its result onto the LF basis, using the trained surrogate to predict the HF coefficients, and reconstructing the full HF flow field.}
+    \caption{The data-driven ML-ROM methodology is divided into two stages. (a) The offline training stage is computationally expensive but performed only once. It involves generating paired HF and LF simulation snapshots, using Proper Orthogonal Decomposition (POD) to find low-dimensional bases, and training a surrogate model to map the LF coefficients to the HF coefficients. (b) The online prediction stage is computationally cheap and performed during inference on unseen parameters. It involves running a new fast LF simulation, projecting its result onto the LF basis, using the trained surrogate to predict the HF coefficients, and reconstructing the full HF flow field. Source: The author.}
     \label{fig:rom_methodology}
     \end{figure}
 
 \section{Objectives and Contributions}
 
-This work addresses the computational challenge in nozzle aerothermodynamic design by developing a multifidelity data-driven reduced-order model (ROM) able to account for viscous effects and recover 2D flow field solutions from simpler 1D inviscid model solutions. The dissertation was structured around the following key objectives:
+This work addresses the computational challenge in nozzle aerothermodynamic design by developing a multifidelity data-driven reduced-order model (ROM) able to account for viscous effects and recover 2D flow field solutions from simpler 1D inviscid model solutions. This monograph was structured around the following key objectives:
 
 \begin{itemize}
     \item \textbf{Implement a multi-fidelity simulation environment:} To develop, verify, and validate both a high-fidelity RANS-CHT model and a computationally inexpensive quasi-1D Euler model to serve as the providers for the data-driven framework.
@@ -240,7 +242,7 @@ The successful completion of these objectives resulted in the following scientif
 
 \section{Dissertation Outline}
 
-The subsequent chapters are structured as follows. Chapter \ref{chap:governing_equations} establishes the theoretical foundations of compressible flow, nozzle aerothermodynamics, and turbulence modeling. Chapter \ref{chap:governing_equations} details the multi-fidelity computational framework, including the setup, verification, and validation of the high and low-fidelity models. Chapter \ref{chap:computational_framework} presents the main data-driven methodology, explaining the principles of Reduced Order Modeling, Proper Orthogonal Decomposition, and the surrogate models employed. Chapter \ref{chap:results_discussion} provides an analysis of the framework's performance, comparing the accuracy and computational efficiency of the different approaches. Finally, Chapter \ref{chap:conclusions_future_work} synthesizes the findings, draws conclusions, and outlines directions for future research.
+The subsequent chapters are structured as follows. Chapter \ref{chap:governing_equations} establishes the theoretical foundations of compressible flow, nozzle aerothermodynamics, and turbulence modeling. Chapter \ref{chap:computational_framework} details the multi-fidelity computational framework, including the setup, verification, and validation of the high and low-fidelity models. Chapter \ref{chap:rom_framework} presents the main data-driven methodology, explaining the principles of Reduced Order Modeling, Proper Orthogonal Decomposition, and the surrogate models employed. Chapter \ref{chap:results_discussion} provides an analysis of the framework's performance, comparing the accuracy and computational efficiency of the different approaches. Finally, Chapter \ref{chap:conclusions_future_work} synthesizes the findings, draws conclusions, and outlines directions for future research.
 
 \chapter{Compressible Flow and Nozzle Aerothermodynamics}
 \label{chap:governing_equations}
@@ -249,12 +251,12 @@ The subsequent chapters are structured as follows. Chapter \ref{chap:governing_e
 
 \subsection{The Euler Equations}
 
-The Euler equations form the mathematical basis for describing inviscid, compressible fluid flow. They represent the conservation of mass, momentum, and energy. For a quasi-one-dimensional flow through a duct with a varying cross-sectional area $S(x)$, these conservation laws can be expressed in the following conservative vector form, as presented in \citep{anderson2003}:
+The Euler equations form the mathematical basis for describing inviscid, compressible fluid flow. They represent the conservation of mass, momentum, and energy. For a quasi-one-dimensional flow through a duct with a varying cross-sectional area $S(x)$, these conservation laws can be expressed in the following conservative vector form, as presented in \cite{anderson2003}:
 \begin{equation}
-    \frac{\partial \mathbf{W}}{\partial t} + \frac{\partial \mathbf{F}}{\partial x} = \mathbf{Q}
+    \frac{\partial \mathbf{W}}{\partial t} + \frac{\partial \mathbf{F}}{\partial x} = \mathbf{Q},
     \label{eq:euler_1d}
 \end{equation}
-,where $\mathbf{W}$ is the vector of conserved variables, $\mathbf{F}$ is the flux vector, and $\mathbf{Q}$ is the source term vector. These vectors are defined as:
+where $\mathbf{W}$ is the vector of conserved variables, $\mathbf{F}$ is the flux vector, and $\mathbf{Q}$ is the source term vector. These vectors are defined as:
 
 \begin{equation}
     \mathbf{W} = 
@@ -276,10 +278,10 @@ The Euler equations form the mathematical basis for describing inviscid, compres
         0 \\
         p \frac{dS}{dx} \\
         0
-    \end{pmatrix}
+    \end{pmatrix}.
 \end{equation}
 
-In these expressions, $\rho$ is the fluid density, $u$ is the axial velocity, $p$ is the static pressure, and $E_{tot}$ is the total energy per unit volume, given by $E_{tot} = \rho(e + u^2/2)$, where $e$ is the specific internal energy. For a calorically perfect gas, the system is closed using the ideal gas law, $p = \rho R T$, and the relation $e = c_v T = p/((\gamma-1)\rho)$, where $\gamma$ is the ratio of specific heats.The source term $\mathbf{Q}$ arises from the dimensional reduction to a single spatial coordinate and accounts for the pressure forces exerted by the nozzle walls on the fluid as the area $S(x)$ changes. 
+In these expressions, $\rho$ is the fluid density, $u$ is the axial velocity, $p$ is the static pressure, and $E_{tot}$ is the total energy per unit volume, given by $E_{tot} = \rho(e + u^2/2)$, where $e$ is the specific internal energy. For a calorically perfect gas, the system is closed using the ideal gas law, $p = \rho R T$, and the relation $e = c_v T = p/((\gamma-1)\rho)$, where $\gamma$ is the ratio of specific heats. The source term $\mathbf{Q}$ arises from the dimensional reduction to a single spatial coordinate and accounts for the pressure forces exerted by the nozzle walls on the fluid as the area $S(x)$ changes. 
 
 %The equations are solved numerically using an in-house finite volume solver. This solver employs appropriate flux-splitting schemes (e.g., Steger-Warming and AUSM) to handle the hyperbolic nature of the equations and accurately capture discontinuities like shock waves. To ensure a well-posed problem across different flow regimes, boundary conditions are implemented using the method of characteristics \citep{hirsch1988numerical, hirsch1990numerical}.
 
@@ -288,33 +290,33 @@ In these expressions, $\rho$ is the fluid density, $u$ is the axial velocity, $p
 \subsection{The Reynolds-Averaged Navier-Stokes (RANS) Equations}
 \label{sec:rans_equations}
 
-The physical behavior of a viscous, heat-conducting, and compressible fluid is governed by the Navier-Stokes equations. These equations represent the conservation of mass, momentum, and energy, forming the complete mathematical description for the fluid dynamics simulations conducted in this work. For a comprehensive derivation of these fundamental principles from first principles, the reader is referred to foundational texts on the subject, such as the work by Versteeg and Malalasekera \citep{versteeg2007}.
+The physical behavior of a viscous, heat-conducting, and compressible fluid is governed by the Navier-Stokes equations. These equations represent the conservation of mass, momentum, and energy, forming the complete mathematical description for the fluid dynamics simulations conducted in this work. For a comprehensive derivation of these fundamental principles from first principles, the reader is referred to foundational texts on the subject, such as the work by \cite{versteeg2007}.
 
 In a conservative and differential form, as implemented within the SU2 software suite \citep{su2_theory}, the compressible Navier-Stokes equations can be expressed compactly as:
 
 \begin{equation}
-    \frac{\partial \mathbf{W}}{\partial t} + \nabla \cdot \mathbf{F}^c(\mathbf{W}) - \nabla \cdot \mathbf{F}^v(\mathbf{W}, \nabla \mathbf{W}) - \mathbf{S} = 0
+    \frac{\partial \mathbf{W}}{\partial t} + \nabla \cdot \mathbf{F}^c(\mathbf{W}) - \nabla \cdot \mathbf{F}^v(\mathbf{W}, \nabla \mathbf{W}) - \mathbf{S} = 0,
     \label{eq:rans_compact}
 \end{equation}
-
 where $\mathbf{W}$ is the vector of conserved variables, $\mathbf{F}^c$ is the convective flux vector, $\mathbf{F}^v$ is the viscous flux vector, and $\mathbf{S}$ is a source term vector (assumed to be zero for this work). The vectors of conserved variables, convective fluxes, and viscous fluxes are defined, respectively, as:
 
 \begin{equation}
 \mathbf{W} = \begin{pmatrix} \rho \\ \rho \mathbf{v} \\ \rho E \end{pmatrix}, \quad
 \mathbf{F}^c = \begin{pmatrix} \rho \mathbf{v} \\ \rho \mathbf{v} \otimes \mathbf{v} + p\tens{I} \\ (\rho E + p)\mathbf{v} \end{pmatrix}, \quad
-\mathbf{F}^v = \begin{pmatrix} 0 \\ \boldsymbol{\tau} \\ \boldsymbol{\tau} \cdot \mathbf{v} + \mathbf{q} \end{pmatrix}
+\mathbf{F}^v = \begin{pmatrix} 0 \\ \boldsymbol{\tau} \\ \boldsymbol{\tau} \cdot \mathbf{v} + \mathbf{q} \end{pmatrix}.
 \end{equation}
 
-In these vectors, $\rho$ is the fluid density, $\mathbf{v}$ is the velocity vector, $E$ is the total energy per unit mass, $p$ is the static pressure, and $\mathbf{I}$ is the identity tensor. The system is closed by the ideal gas law. The viscous stress tensor, $\boldsymbol{\tau}$, for a Newtonian fluid, and the heat flux vector, $\mathbf{q}$, based on Fourier's law of heat conduction, are given by:
+In these vectors, $\rho$ is the fluid density, $\mathbf{v}$ is the velocity vector, $E$ is the total energy per unit mass, $p$ is the static pressure, and $\mathbf{I}$ is the identity tensor. The system is closed by the ideal gas law. The viscous stress tensor, Equation \eqref{eq:viscous_stress_tensor}, for a Newtonian fluid, and the heat flux vector, Equation \eqref{eq:heat_flux_vector}, based on Fourier's law of heat conduction, are given by:
 
 
 \begin{equation}
 \boldsymbol{\tau} = \mu \left( \nabla \mathbf{v} + (\nabla \mathbf{v})^T \right) - \frac{2}{3}\mu (\nabla \cdot \mathbf{v})\mathbf{I}
+\label{eq:viscous_stress_tensor}
 \end{equation}
 \begin{equation}
-\mathbf{q} = k \nabla T
+\mathbf{q} = k \nabla T,
+\label{eq:heat_flux_vector}
 \end{equation}
-
 where $\mu$ is the dynamic viscosity, $k$ is the thermal conductivity, and $T$ is the temperature.
 
 While the Navier-Stokes equations provide a complete description of fluid motion, their direct numerical simulation (DNS) for the high-Reynolds-number turbulent flows characteristic of aerospace applications is computationally prohibitive. The vast range of turbulent length and time scales would require a grid resolution and time-step size that far exceed current computational capabilities for practical engineering problems. To overcome this limitation, a modeling approach is necessary. This work employs the Reynolds-Averaged Navier-Stokes (RANS) methodology, which involves time-averaging the instantaneous Navier-Stokes equations. This process decomposes flow variables into a mean component and a fluctuating component. The non-linearity of the convective term in the momentum equations gives rise to a new term, the Reynolds stress tensor ($-\rho u_i' u_j'$), which represents the effect of turbulent fluctuations on the mean flow and creates a closure problem.
@@ -355,7 +357,7 @@ The critical aspect of a CHT simulation is the coupling at the fluid-solid inter
 \begin{enumerate}
     \item The RANS solver computes the flow field and determines the convective heat flux from the hot gas to the wall.
     \item This heat flux is passed to the solid domain solver and applied as a boundary condition at the interface.
-    \item The heat conduction solver solver calculates the resulting temperature distribution throughout the solid wall.
+    \item The heat conduction solver calculates the resulting temperature distribution throughout the solid wall.
     \item The computed wall temperature at the interface is then passed back to the RANS solver as an updated thermal boundary condition for the fluid domain.
 \end{enumerate}
 
@@ -369,7 +371,7 @@ This iterative exchange of boundary data between the fluid and solid solvers con
 
 \subsection{Implementation and Numerical Method}
 
-The low-fidelity (LF) model is an in-house solver, developed in C++ leveraging the Eigen library for efficient array computations, and designed for maximum computational efficiency. The solver numerically integrates the quasi-1D Euler equations (Equation~\ref{eq:euler_1d}) on a structured, one-dimensional mesh to predict the core dynamics of the nozzle flow.
+The LF model is an in-house solver, developed in C++ leveraging the Eigen library for efficient array computations, and designed for maximum computational efficiency. The solver numerically integrates the quasi-1D Euler equations (Equation~\ref{eq:euler_1d}) on a structured, one-dimensional mesh to predict the core dynamics of the nozzle flow.
 
 A Finite Volume Method is employed for the spatial discretization. To handle the convective terms, the Advection Upstream Splitting Method (AUSM) is used to compute the fluxes at the cell interfaces. This scheme is coupled with a second-order MUSCL (Monotonic Upwind Scheme for Conservation Laws) reconstruction to ensure sharp shock-capturing capabilities without introducing spurious numerical oscillations.
 
@@ -394,37 +396,9 @@ The comparison, shown in Figure~\ref{fig:lf_verification}, reveals excellent agr
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Figuras/arina_validation.png}
-    \caption{Verification of the low-fidelity (LF) quasi-1D Euler solver. Comparison of the in-house solver's predictions against reference numerical data from \citep{arina2004} for a standard nozzle test case with a shock wave. (a) Pressure profile. (b) Density profile. The excellent agreement, including the shock position and strength, verifies the correctness of the LF model implementation.}
+    \caption{Verification of the LF quasi-1D Euler solver. Comparison of the in-house solver's predictions against reference numerical data from \cite{arina2004} for a standard nozzle test case with a shock wave. (a) Pressure profile. (b) Density profile. The excellent agreement, including the shock position and strength, verifies the correctness of the LF model implementation. Source: The author, validation data from \cite{arina2004}.}
     \label{fig:lf_verification}
 \end{figure}
-
-% \section{Low-Fidelity Simulation: The Quasi-1D Euler Approach}
-
-% The low-fidelity model is an in-house, quasi-one-dimensional Euler solver designed for maximum computational efficiency \citep{moreira2023}. It solves the conservation laws for an inviscid, ideal gas on a regular 1D mesh. The numerical scheme employs the finite volume method with Steger-Warming for spatial discretization and the AUSM method for flux evaluation. A fourth-order Runge-Kutta integrator is used for time marching to a steady-state solution \citep{moreira2023}.
-
-
-% \subsection{Numerical Verification}
-
-% To verify this simplified model, its results were compared against published numerical data from a standard nozzle test case presented by Arina (2004). The geometry of the nozzle is defined by Equation~\ref{eq:arinanozzle} within the domain $0 < x < L$, with the throat located at $x_t = 5.0$.
-
-% \begin{equation}
-% S(x)= \begin{cases}
-% 2.5+3\left(\frac{x}{x_t}-1.5\right)\left(\frac{x}{x_t}\right)^2 & , \text { if } x \leqslant x_t \\
-% 3.5-\frac{x}{x_t}\left[6-4.5 \frac{x}{x_t}+\left(\frac{x}{x_t}\right)^2\right] & , \text { if } x>x_t
-% \end{cases}
-% \label{eq:arinanozzle}
-% \end{equation}
-
-% The input parameters for the simulation include a stagnation pressure of $P_0 = 104,074 \text{ kPa}$ and a stagnation temperature of $T_0 = 291.3 \text{ K}$ at the inlet. At the outlet, a static pressure of $P_{exit} = 83,049 \text{ kPa}$ is prescribed. Air is modeled as an ideal gas with a specific gas constant $R = 287 \text{ J/kg}\cdot\text{K}$ and a ratio of specific heats $\gamma = 1.4$.
-
-% The comparison, shown in Figure \ref{fig:lf_verification}, reveals excellent agreement between the in-house solver's predictions and the reference data from \cite{ARINA2004409}. Both the pressure and density profiles along the nozzle are accurately reproduced, including the precise capture of the shock wave's position and strength. This verification confirms that despite its inherent simplifications, the low-fidelity model provides a reliable and accurate representation of the core, one-dimensional flow dynamics \citep{moreira2023}.
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=\textwidth]{Figuras/arina_validation.png}
-%     \caption{Verification of the low-fidelity (LF) quasi-1D Euler solver. Comparison of the in-house solver's predictions against reference numerical data from Arina (2004) for a standard nozzle test case with a shock wave. (a) Pressure profile. (b) Density profile. The excellent agreement, including the shock position and strength, verifies the correctness of the LF model implementation.}
-%     \label{fig:lf_verification}
-% \end{figure}
 
 \section{High-Fidelity Simulation: The 2D RANS-CHT Approach}
 
@@ -436,7 +410,7 @@ The high-fidelity simulations were conducted using the SU2 software suite, an op
 
 The high-fidelity model was configured to solve the conjugate heat transfer problem in its entirety. Within the fluid domain, the Reynolds-Averaged Navier-Stokes (RANS) equations were solved using a finite volume method. The Menter's SST turbulence model was employed to close the equations, as detailed in section \ref{sec:rans_equations}. In the solid domain, representing the nozzle wall, the energy equation was solved to model heat conduction. To achieve a steady-state solution, the simulation utilized an implicit Euler integration method coupled with time marching until convergence was reached at the fluid-solid interface.
 
-The boundary conditions were specified to represent the nozzle's physical operation. At the fluid inlet, total pressure ($p_{0in}$) and total temperature ($T_{0in}$) were defined as stagnation properties. The outlet was defined with a static pressure condition ($p_{\text{exit}}$). The nozzle's centerline was treated as a symmetry axis. A no-slip condition was applied at the inner nozzle wall, which also served as the coupled interface for the conjugate heat transfer (CHT) problem. On the outer surface of the solid wall, representing the cooling channel, a constant temperature of 300 K was imposed, a common simplification for high-efficiency cooling systems %\citep{engblom2007}.
+The boundary conditions were specified to represent the nozzle's physical operation. At the fluid inlet, total pressure ($p_{0in}$) and total temperature ($T_{0in}$) were defined as stagnation properties. The outlet was defined with a static pressure condition ($p_{\text{exit}}$). The nozzle's centerline was treated as a symmetry axis. A no-slip condition was applied at the inner nozzle wall, which also served as the coupled interface for the CHT problem. On the outer surface of the solid wall, representing the cooling channel, a constant temperature of 300 K was imposed, a common simplification for high-efficiency cooling systems %\citep{engblom2007}.
 
 
 \subsection{Numerical Verification: Grid Independence Study}
@@ -445,7 +419,7 @@ A critical step in any CFD analysis is verification, which ensures that the nume
 
 \begin{table}[H]
 \centering
-\caption{Numerical domains for the grid independence study. The table details the number of nodes in the axial ($N_x$) and radial ($N_y$) directions, the total number of cells ($N_{cells}$), the grid refinement ratio ($r$), and the approximate near-wall grid spacing in wall units ($Y^{+}$) \citep{moreira2023}.}
+\caption{Numerical domains for the grid independence study. The table details the number of nodes in the axial ($N_x$) and radial ($N_y$) directions, the total number of cells ($N_{cells}$), the grid refinement ratio ($r$), and the approximate near-wall grid spacing in wall units ($Y^{+}$) \citep{moreira2023}. Source: The author.}
 \label{tab:grid_independence_domains}
 \begin{tabular}{lccccc}
 \toprule
@@ -462,8 +436,8 @@ Figure \ref{fig:grid_choosen} illustrates the computational domains selected by 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{Figuras/grid_choosen.png}
-    \caption{Computational domains used in the grid independence study. The figure shows the three grids with increasing refinement, highlighting the near-wall region resolution.}
+    \includegraphics[width=0.6\textwidth]{Figuras/grid_choosen.png}
+    \caption{Computational domains used in the grid independence study. The figure shows the three grids with increasing refinement, highlighting the near-wall region resolution. Source: The author, generated with GMESH \citep{geuzaine2009gmsh}.}
     \label{fig:grid_choosen}
 \end{figure}
 
@@ -471,7 +445,7 @@ The GCI was calculated for key output quantities: average heat flux along the wa
 
 \begin{table}[H]
 \centering
-\caption{Results for the grid independence study for average heat flux ($q$), pressure ($p$), and wall temperature ($T$). The analysis confirms asymptotic convergence, justifying the selection of Grid 2 \citep{moreira2023}.}
+\caption{Results for the grid independence study for average heat flux ($q$), pressure ($p$), and wall temperature ($T$). The analysis confirms asymptotic convergence, justifying the selection of Grid 2 \citep{moreira2023}. Source: The author.}
 \label{tab:grid_independence_results}
 \begin{tabular}{lcccccc}
 \toprule
@@ -517,7 +491,7 @@ Following verification, the high-fidelity model was validated by comparing its p
         \subcaption{Validation of wall temperature distribution: comparison between SU2 simulation and experimental data.}
         \label{fig:hf_validation_temperature}
     \end{minipage}
-    \caption{Comparison of high-fidelity SU2 simulation results with experimental data from \citep{back1964} for test case no. 313. (a) Centerline pressure distribution. (b) Wall temperature distribution.}
+    \caption{Comparison of high-fidelity SU2 simulation results with experimental data from \citep{back1964} for test case no. 313. (a) Centerline pressure distribution. (b) Wall temperature distribution. z}
     \label{fig:hf_validation}
 \end{figure}
 
@@ -528,9 +502,10 @@ To train the data-driven surrogate models, a comprehensive dataset mapping the l
 
 While the inlet total temperature was varied, other key boundary conditions were held constant across all 181 simulations to isolate its effect. Specifically, the inlet total pressure ($P_{0in}$) was fixed at 1191.0 kPa and the outlet static pressure ($P_{\text{exit}}$) was set to 101.0 kPa.
 
-Each simulation result constitutes a "snapshot" of the flow field. Specifically, a high-fidelity (HF) snapshot is a single vector containing the complete 2D field data, while a low-fidelity (LF) snapshot consists of the flattened 1D data from the Euler solver. The collection of these paired snapshots forms the final dataset used for the subsequent dimensionality reduction and model training stages.
+Each simulation result constitutes a "snapshot" of the flow field. Specifically, a HF snapshot is a single vector containing the complete 2D field data, while a LF snapshot consists of the flattened 1D data from the Euler solver. The collection of these paired snapshots forms the final dataset used for the subsequent dimensionality reduction and model training stages.
 
-For each simulation $j$, the high-fidelity snapshot vector $\mathbf{x}_{h,j} \in \mathbb{R}^{m_h}$ is constructed by concatenating the flattened vectors of pressure ($\mathbf{p}_h$), temperature ($\mathbf{T}_h$), and Mach number ($\mathbf{M}_h$) from all $N_{nodes}$ grid points, along with the wall heat flux ($\mathbf{q}_w$) at the $N_{wall}$ wall points:
+For each simulation $j$, the high-fidelity snapshot vector $\mathbf{x}_{h,j} \in \mathbb{R}^{m_h}$ is constructed by concatenating the flattened vectors of pressure ($\mathbf{p}_h$), temperature ($\mathbf{T}_h$), and Mach number ($\mathbf{M}_h$) from all $N_{nodes}$ grid points, along with the wall heat flux ($\mathbf{q}_w$) at the $N_{wall}$ wall points. Here, the dimension of the high-fidelity vector is given by$m_h = 3 \times N_{nodes} + N_{wall}$.
+
 \begin{equation}
     \mathbf{x}_{h,j} = 
     \begin{bmatrix}
@@ -539,9 +514,11 @@ For each simulation $j$, the high-fidelity snapshot vector $\mathbf{x}_{h,j} \in
         \mathbf{M}_h \\
         \mathbf{q}_w
     \end{bmatrix}_j
-    , \quad \text{where } m_h = 3 \times N_{nodes} + N_{wall}.
 \end{equation}
-Similarly, the corresponding low-fidelity snapshot vector $\mathbf{x}_{l,j} \in \mathbb{R}^{m_l}$ is composed of the flattened 1D data for pressure ($\mathbf{p}_l$), temperature ($\mathbf{T}_l$), and Mach number ($\mathbf{M}_l$) from the $N_{1D}$ points of the Euler solver's mesh:
+
+Similarly, the corresponding low-fidelity snapshot vector $\mathbf{x}_{l,j} \in \mathbb{R}^{m_l}$ is composed of the flattened 1D data for pressure ($\mathbf{p}_l$), temperature ($\mathbf{T}_l$), and Mach number ($\mathbf{M}_l$) from the $N_{1D}$ points of the Euler solver's mesh. Its dimension is defined as
+$m_l = 3 \times N_{1D}$.
+
 \begin{equation}
     \mathbf{x}_{l,j} = 
     \begin{bmatrix}
@@ -549,7 +526,6 @@ Similarly, the corresponding low-fidelity snapshot vector $\mathbf{x}_{l,j} \in 
         \mathbf{T}_l \\
         \mathbf{M}_l
     \end{bmatrix}_j
-    , \quad \text{where } m_l = 3 \times N_{1D}.
 \end{equation}
 
 
@@ -557,7 +533,7 @@ To ensure efficient and uniform exploration of this parameter space, Latin Hyper
 
 \begin{table}[H]
 \centering
-\caption{Summary of the dataset generation and partitioning for machine learning model development.}
+\caption{Summary of the dataset generation and partitioning for machine learning model development. Source: The author.}
 \label{tab:dataset_summary}
 \begin{tabular}{lcccc}
 \toprule
@@ -582,7 +558,7 @@ Reduced Order Modeling is a paradigm designed to address the computational bottl
 
 \section{Proper Orthogonal Decomposition (POD)}
 
-A foundational step in building an effective ROM is dimensionality reduction. Proper Orthogonal Decomposition (POD) is a powerful mathematical technique for extracting a low-dimensional basis that optimally captures the variance within a high-dimensional dataset \citep{berkooz1993, sirovich1987, holmes2012}. Mathematically, POD is equivalent to Principal Component Analysis (PCA) and is implemented via the Singular Value Decomposition (SVD) of the data matrix. The method decomposes a complex, spatiotemporal field into a set of orthogonal spatial modes (the POD modes) and corresponding temporal coefficients. These modes are hierarchical; the first mode captures the most energy (or variance) in the data, the second captures the most of the remaining energy, and so on. This property allows for an extremely efficient, low-rank approximation of the original data by retaining only the first few most energetic modes \citep{rowley2017, taira2017}. The core of the method is the SVD of a snapshot matrix $\mathbf{X}$, which is detailed in the following section. A full mathematical formulation of POD is provided in Appendix B.
+A foundational step in building an effective ROM is dimensionality reduction. Proper Orthogonal Decomposition (POD) is a powerful mathematical technique for extracting a low-dimensional basis that optimally captures the variance within a high-dimensional dataset \citep{berkooz1993, sirovich1987, holmes2012}. Mathematically, POD is equivalent to Principal Component Analysis (PCA) and is implemented via the Singular Value Decomposition (SVD) of the data matrix. The method decomposes a complex, field into a set of orthogonal spatial modes (the POD modes) and corresponding principal componentes coefficients. These modes are hierarchical; the first mode captures the most energy (or variance) in the data, the second captures the most of the remaining energy, and so on. This property allows for an extremely efficient, low-rank approximation of the original data by retaining only the first few most energetic modes \citep{rowley2017, taira2017}. The core of the method is the SVD of a snapshot matrix $\mathbf{X}$, which is detailed in the following section.
 
 \subsection{The Snapshot Method}
 
@@ -609,7 +585,7 @@ The SVD is then performed on these matrices. For a generic snapshot matrix $\mat
 \begin{equation}
 \mathbf{X} = \mathbf{U} \mathbf{\Sigma} \mathbf{V}^T
 \end{equation}
-where $\mathbf{U} \in \mathbb{R}^{m \times m}$ is an orthogonal matrix whose columns are the left singular vectors (the POD spatial modes), $\mathbf{\Sigma} \in \mathbb{R}^{m \times n}$ is a diagonal matrix of singular values $\sigma_i$, and $\mathbf{V} \in \mathbb{R}^{n \times n}$ is an orthogonal matrix whose columns are the right singular vectors (related to the temporal coefficients).
+where $\mathbf{U} \in \mathbb{R}^{m \times m}$ is an orthogonal matrix whose columns are the left singular vectors (the POD spatial modes), $\mathbf{\Sigma} \in \mathbb{R}^{m \times n}$ is a diagonal matrix of singular values $\sigma_i$, and $\mathbf{V} \in \mathbb{R}^{n \times n}$ is an orthogonal matrix whose columns are the right singular vectors (related to the principal components coefficients).
 
 By projecting the high-dimensional snapshot data onto a small number of these modes (a truncated basis $\mathbf{\Psi}_r = [\mathbf{u}_1, \dots, \mathbf{u}_r]$), one obtains a set of low-dimensional coefficients that serve as a compact representation of the full system state. The approximation of a snapshot $\mathbf{x}_j$ and the calculation of its coefficient vector $\mathbf{a}_j$ are given by:
 \begin{equation}
@@ -621,39 +597,36 @@ By projecting the high-dimensional snapshot data onto a small number of these mo
 
 \subsection{Application and Efficacy}
 
-The application of POD to the nozzle flow dataset yielded a remarkable degree of dimensionality reduction. The high-fidelity state, originally described by 208,110 degrees of freedom (the number of grid points times the number of variables), was accurately represented using only 3 POD modes. The effectiveness of this compression is visualized in Figure \ref{fig:pod_results}. The energy spectrum shows a rapid decay, indicating that the vast majority of the system's variance is captured by the first few modes. The projection error associated with this truncation was exceptionally low, with an average global relative error in the temperature field of just 0.0006\% and a maximum error for a sample case of only 0.0133\% \citep{moreira2023}. This demonstrates the extraordinary efficiency of POD in compressing the vast amount of information contained in the CFD solutions into a highly compact, latent variable representation with negligible loss of information.
+The application of POD to the nozzle flow dataset yielded a remarkable degree of dimensionality reduction. The high-fidelity state, originally described by 208,110 degrees of freedom (the number of grid points times the number of variables), was accurately represented using only 3 POD modes. The effectiveness of this compression is visualized in Figure \ref{fig:pod_results}. The energy spectrum shows a rapid decay, indicating that the vast majority of the system's variance is captured by the first few modes. The projection error associated with this truncation was exceptionally low, with an average global relative error in the temperature field of just 0.0006\% and a maximum error for a sample case of only 0.0133\% \citep{moreira2023}. This demonstrates the high efficiency of POD in compressing the vast amount of information contained in the CFD solutions into a highly compact, latent variable representation with negligible loss of information.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{../latex_src/Figuras/POD_energy.pdf}
-    \caption{Efficacy of Proper Orthogonal Decomposition (POD). (a) Normalized energy spectrum, showing the rapid decay of singular values, which indicates that the first few modes capture most of the system's energy. (b) Visualization of the first three dominant spatial POD modes for the temperature field, representing the fundamental patterns of temperature variation across the dataset.}
+    \caption{Efficacy of Proper Orthogonal Decomposition (POD). (a) Normalized energy spectrum, showing the rapid decay of singular values, which indicates that the first few modes capture most of the system's energy. (b) Visualization of the first three dominant spatial POD modes for the temperature field, representing the fundamental patterns of temperature variation across the dataset. Source: The author.}
     \label{fig:pod_results}
 \end{figure}
 
-This powerful compression is the key enabler for the entire surrogate modeling framework. The original problem—mapping a 633-dimensional low-fidelity state vector to a 208,110-dimensional high-fidelity state vector—is a high-dimensional regression task that would be intractable for any machine learning model without an enormous dataset. POD transforms this problem. It acts as an expert feature extractor, identifying the fundamental building blocks (the modes) of the flow. The complex task of learning the spatially distributed physics is thus converted into a much simpler one: learning the mapping between the 10 coefficients of the low-fidelity model and the 10 coefficients of the high-fidelity model. In this synergistic partnership, POD performs the heavy lifting of identifying the relevant physical structures, while the surrogate model learns the relatively simple correlation between their amplitudes. This synergy is the cornerstone of the framework's success.
+This powerful compression is the key enabler for the entire surrogate modeling framework. The original problem, mapping a 633-dimensional low-fidelity state vector to a 208,110-dimensional high-fidelity state vector, is a high-dimensional regression task that would be intractable for any machine learning model without an enormous dataset. POD transforms this problem. It acts as an expert feature extractor, identifying the fundamental building blocks (the modes) of the flow. The complex task of learning the spatially distributed physics is thus converted into a much simpler one: learning the mapping between the 10 coefficients of the low-fidelity model and the 10 coefficients of the high-fidelity model. In this synergistic partnership, POD performs the heavy lifting of identifying the relevant physical structures, while the surrogate model learns the relatively simple correlation between their amplitudes. This synergy is the cornerstone of the framework's success.
 
 \section{Surrogate Modeling for Latent Space Mapping}
 
 Once the dimensionality of the problem has been reduced via POD, a surrogate model is required to learn the nonlinear mapping from the low-fidelity latent space to the high-fidelity latent space. This study compares two distinct approaches for this task: an Artificial Neural Network and a Kriging interpolator.
 
-The goal is to construct a function, $f_{\text{surrogate}}$, that approximates the relationship between the low-fidelity (LF) and high-fidelity (HF) POD coefficients. Given a training dataset of $N_{\text{train}}$ paired coefficients, $\{ (\mathbf{a}_{l,j}, \mathbf{a}_{h,j}) \}_{j=1}^{N_{\text{train}}}$, the surrogate model aims to learn the mapping:
+The goal is to construct a function, $f_{\text{surrogate}}$, that approximates the relationship between the LF and HF POD coefficients. Given a training dataset of $N_{\text{train}}$ paired coefficients, $\{ (\mathbf{a}_{l,j}, \mathbf{a}_{h,j}) \}_{j=1}^{N_{\text{train}}}$, the surrogate model aims to learn the mapping:
 
 \begin{equation}
-    \mathbf{a}_h \approx \hat{\mathbf{a}}_h = f_{\text{surrogate}}(\mathbf{a}_l)
+    \mathbf{a}_h \approx \hat{\mathbf{a}}_h = f_{\text{surrogate}}(\mathbf{a}_l),
     \label{eq:surrogate_mapping}
 \end{equation}
-
 where $\mathbf{a}_l \in \mathbb{R}^{d_l}$ is the vector of LF coefficients, $\mathbf{a}_h \in \mathbb{R}^{d_h}$ is the vector of true HF coefficients, and $\hat{\mathbf{a}}_h$ is the prediction from the surrogate model. This study compares two distinct approaches for this task: an Artificial Neural Network and a Kriging interpolator.
 
 
 \subsection{The Artificial Neural Network (ANN) Approximator}
 
 Artificial Neural Networks are powerful computational models inspired by biological neural systems, renowned for their ability to act as universal function approximators \citep{hornik1989}. The specific architecture used here is a dense Multilayer Perceptron (MLP), which consists of an input layer, multiple hidden layers of interconnected "neurons," and an output layer. Each connection has an associated weight, and each neuron applies a nonlinear activation function to its input. The output $o_j$ of a single neuron is calculated as:
-
 \begin{equation}
-o_j = f \left( \sum_{i} w_{ij} x_i + b_j \right)
+o_j = f \left( \sum_{i} w_{ij} x_i + b_j \right),
 \end{equation}
-
 where $w_{ij}$ are the weights, $x_i$ are the inputs from the previous layer, $b_j$ is a bias term, and $f$ is a nonlinear activation function. The network "learns" by adjusting these weights and biases through a process called back-propagation, which uses gradient descent to minimize a loss function (e.g., Mean Squared Error) between the network's predictions and the true data \citep{yu2019}.
 
 The entire MLP represents a complex, nested function, $f_{\text{ANN}}$, parameterized by the set of all weights $\mathbf{W}$ and biases $\mathbf{b}$. For a given input vector of LF coefficients $\mathbf{a}_l$, the network produces a prediction for the HF coefficients $\hat{\mathbf{a}}_h$:
@@ -673,14 +646,14 @@ The implementation in this work utilized the TensorFlow library to construct a d
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Figuras/nn.pdf}
-    \caption{Artificial Neural Network (ANN) model architecture. Schematic of the Multilayer Perceptron (MLP) used, showing the input layer (3 LF coefficients), ten hidden layers, and the output layer (3 HF coefficients).}
+    \caption{Artificial Neural Network (ANN) model architecture. Schematic of the Multilayer Perceptron (MLP) used, showing the input layer (3 LF coefficients), ten hidden layers, and the output layer (3 HF coefficients). Source: The author, generated with NN-SVG (\url{https://alexlenail.me/NN-SVG/}).}
     \label{fig:ann_architecture}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Figuras/nn_loss.pdf}
-    \caption{Learning curve from the ANN training process. Mean Squared Error (MSE) versus training epochs for both the training and validation datasets. The convergence of both curves indicates successful training.}
+    \caption{Learning curve from the ANN training process. Mean Squared Error (MSE) versus training epochs for both the training and validation datasets. The convergence of both curves indicates successful training. Source: The author.}
     \label{fig:ann_loss}
 \end{figure}
 
@@ -713,7 +686,7 @@ This reconstruction process follows a four-step algorithm, as detailed below.
 
 \begin{enumerate}
     \item \textbf{Generate a Low-Fidelity Snapshot:}
-    For a new set of input parameters, a low-fidelity (LF) simulation is run to obtain the corresponding solution vector, or "snapshot," $\mathbf{x}_l$.
+    For a new set of input parameters, a LF simulation is run to obtain the corresponding solution vector, or "snapshot," $\mathbf{x}_l$.
 
     \item \textbf{Project onto the Low-Fidelity Basis:}
     The new snapshot $\mathbf{x}_l$ is projected onto the pre-computed LF basis, $\mathbf{\Psi}_l$, to obtain its low-dimensional representation (the coefficient vector), $\mathbf{a}_l$.
@@ -734,12 +707,6 @@ This reconstruction process follows a four-step algorithm, as detailed below.
     \end{equation}
 \end{enumerate}
 
-% \begin{figure}[H]
-%     \centering
-%     %\includegraphics[width=0.8\textwidth]{placeholder.png}
-%     \caption{Flowchart of the online prediction and reconstruction stage. A new input parameter prompts a fast low-fidelity (LF) simulation. The resulting LF snapshot is projected onto its POD basis to obtain low-dimensional coefficients. The trained surrogate model (ANN or Kriging) maps these to predicted high-fidelity (HF) coefficients, which are then used with the HF POD basis to reconstruct the full HF flow field.}
-%     \label{fig:online_reconstruction}
-% \end{figure}
 
 \subsection{Neural Network Reconstruction}
 
@@ -764,7 +731,7 @@ The Neural Network-based ROM demonstrated high accuracy. For a representative te
         \includegraphics[width=\textwidth]{Figuras/nn_error_temperature.pdf}
         \caption{Error}
     \end{subfigure}
-    \caption{Temperature field: (a) ground truth (FOM), (b) ANN-ROM prediction, (c) absolute error.}
+    \caption{Temperature field: (a) ground truth (FOM), (b) ANN-ROM prediction, (c) absolute error. Source: The author.}
     \label{fig:nn_reconstruction_temperature}
 \end{figure}
 
@@ -787,7 +754,7 @@ The Neural Network-based ROM demonstrated high accuracy. For a representative te
         \includegraphics[width=\textwidth]{Figuras/nn_error_pressure.pdf}
         \caption{Error}
     \end{subfigure}
-    \caption{Pressure field: (a) ground truth (FOM), (b) ANN-ROM prediction, (c) absolute error.}
+    \caption{Pressure field: (a) ground truth (FOM), (b) ANN-ROM prediction, (c) absolute error. Source: The author.}
     \label{fig:nn_reconstruction_pressure}
 \end{figure}
 
@@ -810,14 +777,14 @@ The Neural Network-based ROM demonstrated high accuracy. For a representative te
         \includegraphics[width=\textwidth]{Figuras/nn_error_mach.pdf}
         \caption{Error}
     \end{subfigure}
-    \caption{Mach number field: (a) ground truth (FOM), (b) ANN-ROM prediction, (c) absolute error.}
+    \caption{Mach number field: (a) ground truth (FOM), (b) ANN-ROM prediction, (c) absolute error. Source: The author.}
     \label{fig:nn_reconstruction_mach}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Figuras/nn_heat_flux.pdf}
-    \caption{Comparison of wall heat flux between the FOM and ANN-ROM.}
+    \caption{Comparison of wall heat flux between the FOM and ANN-ROM. Source: The author.}
     \label{fig:nn_reconstruction_heat_flux}
 \end{figure}
 
@@ -842,7 +809,7 @@ The Kriging-based ROM achieved even higher accuracy than the neural network appr
         \includegraphics[width=\textwidth]{Figuras/kriging_error_temperature.pdf}
         \caption{Error}
     \end{subfigure}
-    \caption{Temperature field: (a) ground truth (FOM), (b) Kriging-ROM prediction, (c) absolute error.}
+    \caption{Temperature field: (a) ground truth (FOM), (b) Kriging-ROM prediction, (c) absolute error. Source: The author.}
     \label{fig:kriging_reconstruction_temperature}
 \end{figure}
 
@@ -865,7 +832,7 @@ The Kriging-based ROM achieved even higher accuracy than the neural network appr
         \includegraphics[width=\textwidth]{Figuras/kriging_error_pressure.pdf}
         \caption{Error}
     \end{subfigure}
-    \caption{Pressure field: (a) ground truth (FOM), (b) Kriging-ROM prediction, (c) absolute error.}
+    \caption{Pressure field: (a) ground truth (FOM), (b) Kriging-ROM prediction, (c) absolute error. Source: The author.}
     \label{fig:kriging_reconstruction_pressure}
 \end{figure}
 
@@ -888,14 +855,14 @@ The Kriging-based ROM achieved even higher accuracy than the neural network appr
         \includegraphics[width=\textwidth]{Figuras/kriging_error_mach.pdf}
         \caption{Error}
     \end{subfigure}
-    \caption{Mach number field: (a) ground truth (FOM), (b) Kriging-ROM prediction, (c) absolute error.}
+    \caption{Mach number field: (a) ground truth (FOM), (b) Kriging-ROM prediction, (c) absolute error. Source: The author.}
     \label{fig:kriging_reconstruction_mach}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Figuras/kriging_heat_flux.pdf}
-    \caption{Comparison of wall heat flux between the FOM and Kriging-ROM.}
+    \caption{Comparison of wall heat flux between the FOM and Kriging-ROM. Source: The author.}
     \label{fig:kriging_reconstruction_heat_flux}
 \end{figure}
 
@@ -903,47 +870,65 @@ The Kriging-based ROM achieved even higher accuracy than the neural network appr
 
 A central contribution of this research is the direct, quantitative comparison between the modern machine learning approach (ANN) and the established statistical method (Kriging). The performance of both models, along with the baseline simulations, is synthesized in Table \ref{tab:cost_accuracy_comparison}.
 
+The accuracy metrics employed are the Normalized Root Mean Square Error (NRMSE) and the Maximum Relative Error (MRE). In this study, the NRMSE is defined as
+
+\begin{equation}
+\mathrm{NRMSE} = \frac{\sqrt{\frac{1}{N}\sum_{i=1}^{N} \left( y_i - \hat{y}_i \right)^2}}{y_{\max} - y_{\min}} \times 100\%,
+\end{equation}
+
+where \( y_i \) and \( \hat{y}_i \) denote the reference and predicted values, respectively, and \( y_{\max} \) and \( y_{\min} \) are the maximum and minimum values in the reference dataset.  
+The MRE is expressed as
+
+\begin{equation}
+\mathrm{MRE} = \max_{i} \left( \frac{|y_i - \hat{y}_i|}{|y_i|} \right) \times 100\%,
+\end{equation}
+
+which corresponds to the largest relative deviation (in \%) observed between the predicted and reference values.
+
+
 \begin{table}[H]
 \centering
-\caption{Computational cost and accuracy comparison for Kriging and Neural Network (NN) metamodels. Best results are in \textbf{bold} and worst results in \textit{italics}.}
+\caption{Computational cost and accuracy comparison for Kriging and ANN metamodels. Best results are in \textbf{bold} and worst results in \textit{italics}. The metrics values of Normalized Root Mean Squared (NRMSE) and Maximum Relative Error (MRE) are presented in percentual (\%) units. Source: The author.}
 \label{tab:cost_accuracy_comparison}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{l c c c c c c c c c c}
+
+\begin{subtable}[t]{0.9\textwidth}
+\centering
+\caption{CPU time and Speedup}
+\begin{tabular}{l c c}
 \toprule
-& CPU time [s] & \makecell{Speedup \\ w.r.t. \\ High-Fidelity} &
- \multicolumn{2}{c}{Pressure} &
- \multicolumn{2}{c}{Temperature} &
- \multicolumn{2}{c}{Mach} &
- \multicolumn{2}{c}{Heat Flux} \\
-& & &
- NRMSE & MaxRelError &
- NRMSE & MaxRelError &
- NRMSE & MaxRelError &
- NRMSE & MaxRelError \\
+ & CPU time [s] & \makecell{Speedup \\ w.r.t. \\ High-Fidelity} \\
 \midrule
-\textbf{High-fidelity model} & 1.53$\times 10^{3}$ & - & - & - & - & - & - & - & - & - \\
-\textbf{Low-fidelity model}  & 1.02$\times 10^{0}$ & 1.50$\times 10^{3}$ & - & - & - & - & - & - & - & - \\
-\textbf{NN training} & 3.17$\times 10^{2}$ & - &
- \textit{2.08$\times 10^{-6}$} & \textit{2.48$\times 10^{-2}$} &
- \textit{2.12$\times 10^{-3}$} & \textit{5.70$\times 10^{-1}$} &
- \textit{5.77$\times 10^{-5}$} & \textit{1.06$\times 10^{0}$} &
- \textit{1.28$\times 10^{-3}$} & \textit{5.97$\times 10^{0}$} \\
-\textbf{Kriging training} & \textbf{5.70$\times 10^{0}$} & - &
- \textbf{1.89$\times 10^{-6}$} & \textbf{2.43$\times 10^{-2}$} &
- \textbf{5.50$\times 10^{-5}$} & \textbf{3.95$\times 10^{-1}$} &
- \textbf{4.24$\times 10^{-5}$} & \textbf{9.96$\times 10^{-1}$} &
- \textbf{3.07$\times 10^{-4}$} & \textbf{5.60$\times 10^{0}$} \\
-\textbf{Single NN evaluation} & 2.30$\times 10^{-1}$ & 6.66$\times 10^{3}$ & - & - & - & - & - & - & - & - \\
-\textbf{Single Kriging evaluation} & \textbf{4.00$\times 10^{-2}$} & \textbf{3.83$\times 10^{4}$} & - & - & - & - & - & - & - & - \\
+\textbf{HF model} & 1.53$\times 10^{3}$ & - \\
+\textbf{LF model}  & 1.02$\times 10^{0}$ & 1.50$\times 10^{3}$ \\
+\textbf{ANN training} & 3.17$\times 10^{2}$ & - \\
+\textbf{Kriging training} & \textbf{5.70$\times 10^{0}$} & - \\
+\textbf{ANN evaluation} & 2.30$\times 10^{-1}$ & 6.66$\times 10^{3}$ \\
+\textbf{Kriging evaluation} & \textbf{4.00$\times 10^{-2}$} & \textbf{3.83$\times 10^{4}$} \\
 \bottomrule
-\end{tabular}%
-}
+\end{tabular}
+\end{subtable}
+
+\vspace{0.5cm} % espaço entre as subfiguras
+
+\begin{subtable}[t]{0.9\textwidth}
+\centering
+\caption{NRMSE and MRE metrics}
+\begin{tabular}{l cc cc}
+\toprule
+ & \multicolumn{2}{c}{ANN} & \multicolumn{2}{c}{Kriging} \\
+Variable & NRMSE & MRE & NRMSE & MRE \\
+\midrule
+\textbf{Pressure} & \textit{2.08$\times 10^{-6}$} & \textit{2.48$\times 10^{-2}$} & \textbf{1.89$\times 10^{-6}$} & \textbf{2.43$\times 10^{-2}$} \\
+\textbf{Temperature} & \textit{2.12$\times 10^{-3}$} & \textit{5.70$\times 10^{-1}$} & \textbf{5.50$\times 10^{-5}$} & \textbf{3.95$\times 10^{-1}$} \\
+\textbf{Mach} & \textit{5.77$\times 10^{-5}$} & \textit{1.06$\times 10^{0}$} & \textbf{4.24$\times 10^{-5}$} & \textbf{9.96$\times 10^{-1}$} \\
+\textbf{Heat Flux} & \textit{1.28$\times 10^{-3}$} & \textit{5.97$\times 10^{0}$} & \textbf{3.07$\times 10^{-4}$} & \textbf{5.60$\times 10^{0}$} \\
+\bottomrule
+\end{tabular}
+\end{subtable}
+
 \end{table}
 
-
-
-
-The results clearly show that while both ROMs provide massive speedups, the Kriging model is superior in every metric: it is faster to train, faster to evaluate, and slightly more accurate. This counter-intuitive result, where a "classic" statistical method outperforms a more "modern" neural network, warrants deeper analysis. The reason for Kriging's superior performance likely lies in the specific nature of this engineering problem: a relatively small training dataset (145 points) is used to learn a smooth, low-dimensional mapping (10 input variables to 10 output variables). Artificial Neural Networks are highly flexible models with a large number of free parameters (weights and biases). While this flexibility is a great strength for complex, high-dimensional problems with vast amounts of data, it can be a weakness with smaller datasets, where the network may struggle to generalize perfectly. Kriging, in contrast, is a method specifically designed for interpolation from sparse data \citep{jones1998, ng2018}. Its underlying statistical assumptions—that the function is a realization of a Gaussian process with a certain spatial correlation—provide a strong "inductive bias". This bias constrains the model, guiding it to find the best linear unbiased predictor based on the correlations observed in the limited training data \citep{rasmussen2006, sacks1989}. For this particular problem, Kriging's statistically-grounded approach proved to be a more efficient and robust strategy for interpolation than the more flexible but less constrained neural network. This finding serves as an important reminder for the engineering community: the application of complex deep learning models is not always the optimal path, and mature statistical techniques should be carefully considered, as they may be more appropriate and effective for the problem at hand.
+The results clearly show that while both ROMs provide massive speedups, the Kriging model is superior in every metric: it is faster to train, faster to evaluate, and slightly more accurate. This counter-intuitive result, where a "classic" statistical method outperforms a more "modern" neural network, warrants deeper analysis. The reason for Kriging's superior performance likely lies in the specific nature of this engineering problem: a relatively small training dataset (145 points) is used to learn a smooth, low-dimensional mapping (10 input variables to 10 output variables). Artificial Neural Networks are highly flexible models with a large number of free parameters (weights and biases). While this flexibility is a great strength for complex, high-dimensional problems with vast amounts of data, it can be a weakness with smaller datasets, where the network may struggle to generalize perfectly. Kriging, in contrast, is a method specifically designed for interpolation from sparse data \citep{jones1998, ng2018}. Its underlying statistical assumptions, that the function is a realization of a Gaussian process with a certain spatial correlation, provide a strong "inductive bias". This bias constrains the model, guiding it to find the best linear unbiased predictor based on the correlations observed in the limited training data \citep{rasmussen2006, sacks1989}. For this particular problem, Kriging's statistically-grounded approach proved to be a more efficient and robust strategy for interpolation than the more flexible but less constrained neural network. This finding serves as an important reminder for the engineering community: the application of complex deep learning models is not always the optimal path, and mature statistical techniques should be carefully considered, as they may be more appropriate and effective for the problem at hand.
 
 \section{Evaluation of Computational Gains and Engineering Impact}
 

@@ -335,7 +335,7 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
 	% ----
 	\renewcommand{\@AssinaturaOrientador}{Advisor's signature:}
 	\renewcommand{\@AssinaturaAutor}{Author's signature:}
-	\renewcommand{\@AoCurso}{to the Undergraduate course of}
+	\renewcommand{\@AoCurso}{to the undergraduate course of}
 	\renewcommand{\@ComoParteRequisitos}{as a partial requirement for obtaining a \foreign@degname's degree in} 
 	\renewcommand{\@em}{in}
 	\renewcommand{\@de}{of}
@@ -411,8 +411,8 @@ top=3.0cm,bottom=2.0cm,left=3.0cm,right=2.0cm]{geometry}
   \newcommand{\@degreename}{BACHELOR}
   \newcommand{\local@degname}{Bacharel}
   \newcommand{\foreign@degname}{Bachelor}
-  \newcommand\local@doctype{Monografia}
-  \newcommand\foreign@doctype{Monography}
+  \newcommand\local@doctype{Nonografia}
+  \newcommand\foreign@doctype{Monograph}
 }
 \DeclareOption{dscexam}{%
   \newcommand{\@degree}{D.Sc.}
